@@ -4,6 +4,11 @@ import './App.css';
 
 export default class App extends React.Component {
   
+  constructor(props) {
+    super(props)
+    this.state = {}
+  }
+
   const sightings = [
     {
       id: 0,
@@ -29,14 +34,7 @@ export default class App extends React.Component {
       location: 'San Francisco, California',
       date: '/*look up how to enter date*/',
     }
-  ]
-  
-  constructor(props) {
-    super(props)
-    this.state = {
-      sightings,
-    }
-  }
+  ];
 
   render() {
     return (
