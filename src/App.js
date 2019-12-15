@@ -9,7 +9,7 @@ export default class App extends React.Component {
     this.state = {}
   }
 
-  const sightings = [
+  sightings = [
     {
       id: 0,
       briefDescription: 'Sea Otters Rafting',
