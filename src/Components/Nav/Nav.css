@@ -1,0 +1,11 @@
+.topNav {
+    background-color: #569AB0;
+}
+
+.topNav a {
+    color: #BBEDFD;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 15px;
+}
