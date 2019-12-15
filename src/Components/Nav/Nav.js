@@ -1,7 +1,6 @@
 import React from './node_modules/react';
 
-export default class Nav extends React.Component {
-    render() {
+function Nav() {
         return (
             <div className="topNav">
                 <a href="www.wildlifewatch.com" className="homeLink">Home</a>
@@ -10,4 +9,5 @@ export default class Nav extends React.Component {
             </div>
         )
     }
-}
+
+export default Nav();
