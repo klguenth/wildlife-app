@@ -1,5 +1,6 @@
 .topNav {
     background-color: #569AB0;
+    position: fixed;
 }
 
 .topNav a {

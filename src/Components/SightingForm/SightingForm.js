@@ -1,5 +1,6 @@
 import React from 'react';
 import { ReactRouter } from 'react-router';
+import SubmitButton from './SubmitButton/SubmitButton.js';
 
 export default class Sighting extends React.Component {
     render() {
@@ -31,7 +32,7 @@ export default class Sighting extends React.Component {
                         <input type="number" name="date-day" className="date-day"  placeholder="01" min="1" max="31" required="" />
                         <input type="number" name="date-year" className="date-year" placeholder="2017" min="2016" max="2017" required="" />
                     </div>
-                <button type="submit">Submit</button>
+                <SubmitButton />
                 <button type="reset">Reset</button>
                 </form>
             </div>
