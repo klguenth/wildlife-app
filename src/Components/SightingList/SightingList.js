@@ -17,6 +17,6 @@ export default class SightingList extends React.Component {
                     </ul>
                 </section>
             </div>
-        )
+        );
     }
 }
