@@ -1,5 +1,5 @@
-import React from 'react';
-import { ReactRouter } from 'react-router';
+import React from './node_modules/react';
+import { ReactRouter } from './node_modules/react-router';
 
 export default class Sighting extends React.Component {
     render() {
