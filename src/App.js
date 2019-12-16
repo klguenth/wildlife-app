@@ -1,6 +1,6 @@
 import React from 'react';
 import Nav from './Components/Nav/Nav.js';
-import SignUpForm from './SignUpForm/SignUpForm.js';
+import SignUpForm from './Components/SignUpForm/SignUpForm.js';
 import './App.css';
 
 export default class App extends React.Component {
@@ -42,7 +42,7 @@ export default class App extends React.Component {
       <main id='App'>
         <Nav />
         <div>
-          <header className="App">
+          <header className="appTitle">
             Wildlife Watch
           </header>
           <section className="mainSection">

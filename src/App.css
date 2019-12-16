@@ -1,3 +1,11 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
 #App {
-    background-color: #569AB0;
+    background-color: #2F5980
+}
+
+h3 {
+    text-align: center;
 }
