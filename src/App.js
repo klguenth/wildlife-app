@@ -60,6 +60,7 @@ export default class App extends React.Component {
               <h4>Record Species, behavior, and track animal sightings over time.</h4>
             </div>
             <div className="wwSummary">
+              <h3>Start Tracking</h3>
               <SignUpForm />
             </div>
           </section>
