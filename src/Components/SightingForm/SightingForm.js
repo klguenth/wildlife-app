@@ -32,8 +32,8 @@ export default class Sighting extends React.Component {
                         <input type="number" name="date-day" className="date-day"  placeholder="01" min="1" max="31" required="" />
                         <input type="number" name="date-year" className="date-year" placeholder="2017" min="2016" max="2017" required="" />
                     </div>
-                <SubmitButton />
-                <button type="reset">Reset</button>
+                    <SubmitButton />
+                    <button type="reset">Reset</button>
                 </form>
             </div>
         )
