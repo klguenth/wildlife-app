@@ -1,0 +1,19 @@
+.mainSection {
+    text-align: center;
+}
+
+input {
+    border: none;
+    border-bottom: 3px solid #A9D5FD;
+    background-color: #2F5980;
+    color: #F1F7F9;
+}
+
+::placeholder {
+    color: #F1F7F9;
+    padding-left: 15px;
+}
+
+label {
+    color: #53BDE0;
+}
