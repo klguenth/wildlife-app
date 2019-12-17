@@ -21,7 +21,7 @@ export default class SignUpForm extends React.Component {
                 </div>
                 <div>
                     <label for="password">Password</label>
-                    <input placeholder='WhaLeS1!' type="password" name='password' id='password' />
+                    <input placeholder='WhaLeS1!' type="text" name='password' id='password' />
                 </div>
                 <button type='submit'>Sign Up</button>
                 </form>

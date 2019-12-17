@@ -44,7 +44,7 @@ export default class App extends React.Component {
         <main id='App'>
           <div class='blurred-box'>
             <header className="appTitle">
-              Wildlife Watch
+              <h1>Wildlife Watch</h1>
             </header>
             <section className="mainSection">
               <h2 className="conserveQuote">"In the end we will conserve only what we love; we will love only what we understand; we will understand only what we are taught." -Baba Dioum</h2>

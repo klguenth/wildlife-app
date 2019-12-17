@@ -1,11 +1,15 @@
-.topNav {
-    background-color: #569AB0;
+
+.topNav{
     position: fixed;
+    width: 100%;
+    padding: 15px;
+    backdrop-filter: blur(10px);
 }
+
 
 .topNav a {
     color: #BBEDFD;
-    text-align: center;
+    text-align: right;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 15px;

@@ -5,8 +5,12 @@
 input {
     border: none;
     border-bottom: 3px solid #A9D5FD;
-    background-color: #2F5980;
     color: #F1F7F9;
+    width: 200px;
+}
+
+input[type="text"] {
+    background: transparent;
 }
 
 ::placeholder {
