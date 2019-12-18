@@ -1,6 +1,11 @@
 import React from 'react';
 import Nav from './Components/Nav/Nav.js';
 import SignUpForm from './Components/SignUpForm/SignUpForm.js';
+import LandingPage from './Components/LandingPage/LandingPage.js';
+import Login from './Components/Login/Login.js';
+import SightingForm from './Components/SightingForm/SightingForm.js';
+import SightingList from './Components/SightingList/SightingList.js';
+import { Route } from 'react-router-dom';
 import './App.css';
 
 export default class App extends React.Component {
@@ -9,6 +14,18 @@ export default class App extends React.Component {
     super(props)
     this.state = {}
   }
+
+  renderRoutes() {
+    return (
+      <>
+        <Route exact path='/' component={LandingPage} />
+        <Route path='/login' component={Login} />
+        <Route path='/sightingForm' component={SightingForm} />
+        <Route path='/sightingList' component={SightingList} />
+      </>
+    );
+  }
+
 
   sightings = [
     {

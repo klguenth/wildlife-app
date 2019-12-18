@@ -1,6 +1,6 @@
 import React from 'react';
 import './Login.css';
-import SubmitButton from './SubmitButton/SubmitButton';
+import SubmitButton from '../SubmitButton/SubmitButton';
 
 export default class Login extends React.Component {
     

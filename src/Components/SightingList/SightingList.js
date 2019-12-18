@@ -1,7 +1,7 @@
 import React from 'react';
-import Nav from './Nav/Nav.js';
-import Sighting from './Sighting/Sighting.js';
-import FilterOptions from './FilterOptions/FilterOptions.js';
+import Nav from '../Nav/Nav.js';
+import Sighting from '../Sighting/Sighting.js';
+import FilterOptions from '../FilterOptions/FilterOptions.js';
 
 export default class SightingList extends React.Component {
     render() {

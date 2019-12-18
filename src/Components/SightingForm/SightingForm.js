@@ -1,6 +1,5 @@
 import React from 'react';
-import { ReactRouter } from 'react-router';
-import SubmitButton from './SubmitButton/SubmitButton.js';
+import SubmitButton from '../SubmitButton/SubmitButton.js';
 
 export default class Sighting extends React.Component {
     render() {
