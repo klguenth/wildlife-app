@@ -1,12 +1,10 @@
 import React from 'react';
 import SubmitButton from '../SubmitButton/SubmitButton.js';
-import Nav from '../Nav/Nav.js';
 
 export default class SightingForm extends React.Component {
     render() {
         return (
             <div>
-                <Nav />
                 <header>
                     <h1>New Sighting</h1>
                 </header>

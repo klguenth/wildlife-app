@@ -3,7 +3,7 @@ import Nav from '../Nav/Nav.js';
 import Sighting from '../Sighting/Sighting.js';
 import FilterOptions from '../FilterOptions/FilterOptions.js';
 import SightingForm from '../SightingForm/SightingForm.js';
-import { Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default class SightingList extends React.Component {
     render() {

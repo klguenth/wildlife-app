@@ -68,6 +68,7 @@ export default class App extends React.Component {
               </h1>
             </header>
             <section className="mainSection">
+              {this.renderRoutes()}
               <h2 className="conserveQuote">"In the end we will conserve only what we love; we will love only what we understand; we will understand only what we are taught." -Baba Dioum</h2>
               <div className="wwSummary">
                 <h3>Get closer to the natural world.</h3>
