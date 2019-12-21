@@ -5,7 +5,7 @@ import LandingPage from './Components/LandingPage/LandingPage.js';
 import Login from './Components/Login/Login.js';
 import SightingForm from './Components/SightingForm/SightingForm.js';
 import SightingList from './Components/SightingList/SightingList.js';
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import './App.css';
 
 export default class App extends React.Component {
@@ -57,11 +57,15 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <Nav />
+        <div className="navBar">
+          <Nav />
+        </div>
         <main id='App'>
           <div class='blurred-box'>
             <header className="appTitle">
-              <h1>Wildlife Watch</h1>
+              <h1>
+                <Link to="/">Wildlife Watch</Link>
+              </h1>
             </header>
             <section className="mainSection">
               <h2 className="conserveQuote">"In the end we will conserve only what we love; we will love only what we understand; we will understand only what we are taught." -Baba Dioum</h2>

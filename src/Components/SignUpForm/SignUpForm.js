@@ -1,4 +1,6 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
+import SightingList from '../SightingList/SightingList.js';
 import './SignUpForm.css';
 
 export default class SignUpForm extends React.Component {
@@ -23,7 +25,9 @@ export default class SignUpForm extends React.Component {
                     <label for="password">Password</label>
                     <input placeholder='WhaLeS1!' type="text" name='password' id='password' />
                 </div>
-                <button type='submit'>Sign Up</button>
+                <button type='submit'>
+                    <Route to="/SightingList" component={SightingList}>Sign Up</Route>
+                </button>
                 </form>
             </div>
         )

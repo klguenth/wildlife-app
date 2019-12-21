@@ -2,6 +2,8 @@ import React from 'react';
 import Nav from '../Nav/Nav.js';
 import Sighting from '../Sighting/Sighting.js';
 import FilterOptions from '../FilterOptions/FilterOptions.js';
+import SightingForm from '../SightingForm/SightingForm.js';
+import { Route, Link } from 'react-router-dom';
 
 export default class SightingList extends React.Component {
     render() {
@@ -9,6 +11,9 @@ export default class SightingList extends React.Component {
             <div>
                 <section className="NavBar">
                     <Nav />
+                </section>
+                <section className="SightingForm">
+                    <Link to="SightingForm" component={SightingForm}>Sighting Form</Link>
                 </section>
                 <section className="SightingList">
                     <FilterOptions />

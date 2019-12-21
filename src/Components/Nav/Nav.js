@@ -1,13 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Nav.css';
 
 export default class Nav extends React.Component {
     render() {
         return (
             <div className="topNav">
-                <a href="www.wildlifewatch.com" className="homeLink">Home</a>
-                <a href="www.wildlifewatch.com/login" className="loginLink">Login</a>
-                <a href="www.wildlifewatch.com/about" className="aboutLink">About</a>
+                <Link to='/LandingPage'>Home</Link>
+                <Link to='/Login'>Login</Link>
             </div>
         )
     }

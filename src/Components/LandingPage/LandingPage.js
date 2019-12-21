@@ -1,10 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import Nav from '../Nav/Nav.js';
 import './LandingPage.css';
 
 export default class LandingPage extends React.Component {
     render() {
         return (
             <div className='blurred-box'>
+                <Nav />
                 <section className="mainSection">
                     <h2 className="conserveQuote">"In the end we will conserve only what we love; we will love only what we understand; we will understand only what we are taught." -Baba Dioum</h2>
                     <div className="wwSummary">
@@ -22,6 +25,7 @@ export default class LandingPage extends React.Component {
                     <div className="wwSummary">
                     </div>
                 </section>
+                <Link to='/SignUpForm'>Sign Up</Link>
             </div>
         );
     }

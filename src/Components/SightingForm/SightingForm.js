@@ -1,10 +1,12 @@
 import React from 'react';
 import SubmitButton from '../SubmitButton/SubmitButton.js';
+import Nav from '../Nav/Nav.js';
 
-export default class Sighting extends React.Component {
+export default class SightingForm extends React.Component {
     render() {
         return (
             <div>
+                <Nav />
                 <header>
                     <h1>New Sighting</h1>
                 </header>
@@ -23,13 +25,13 @@ export default class Sighting extends React.Component {
                     </div>
                     <div className="form-section">
                         <label for="behavior-record">Detailed Behavior Record</label>
-                        <textarea name="behavior-record" rows="15"   required />
+                        <textarea name="behavior-record" rows="15" required />
                     </div>
                     <div className="form-section">
                         <p className="sighting-date">Date of Sighting</p>
                         <input type="number" name="date-month" placeholder="01" min="1" max="12" required="" />
                         <input type="number" name="date-day" className="date-day"  placeholder="01" min="1" max="31" required="" />
-                        <input type="number" name="date-year" className="date-year" placeholder="2017" min="2016" max="2017" required="" />
+                        <input type="number" name="date-year" className="date-year" placeholder="2019" min="1900" max="2020" required="" />
                     </div>
                     <SubmitButton />
                     <button type="reset">Reset</button>
