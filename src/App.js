@@ -19,9 +19,11 @@ export default class App extends React.Component {
   renderMainRoutes() {
     return (
       <>
+        <Route path='/login' component={Login} />
         <Route path='/sightingForm' component={SightingForm} />
         <Route path='/sightingList' component={SightingList} />
-        <Route path='signupForm' component={SignUpForm} />
+        <Route path='/signupForm' component={SignUpForm} />
+        <Route path='/landingPage' component={LandingPage} />
       </>
     );
   }

@@ -1,24 +1,23 @@
 import React from 'react';
 import './Login.css';
 import SubmitButton from '../SubmitButton/SubmitButton';
+import ResetButton from '../ResetButton/ResetButton.js';
 
 export default class Login extends React.Component {
-    
-    //insert form validation code here
-    
     render() {
         return (
            <div>
                 <form className="loginForm">
-                <div>
-                    <label for="username">Email</label>
-                    <input type="text" name='username' id='username' />
-                </div>
-                <div>
-                    <label for="password">Password</label>
-                    <input type="password" name='password' id='password' />
-                </div>
+                    <div className="usernameField">
+                        <label htmlFor="username">Email</label>
+                        <input type="text" name='username' id='username' />
+                    </div>
+                    <div className="passwordField">
+                        <label htmlFor="password">Password</label>
+                        <input type="password" name='password' id='password' />
+                    </div>
                 <SubmitButton />
+                <ResetButton />
                 </form>
            </div> 
         );

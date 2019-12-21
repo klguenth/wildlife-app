@@ -1,5 +1,5 @@
 
-.submitButton {
+.resetButton {
     display: inline-block;
     padding: 0.35em 1.2em;
     border: 1px solid;
@@ -13,12 +13,12 @@
     text-align:center;
     transition: all 0.2s;
 }
-.submitButton:hover {
+.resetButton:hover {
     color:#07B8A4;
     background-color:#000000;
 }
 @media all and (max-width:30em) {
-    .submitButton {
+    .resetButton {
         display:block;
         margin:0.4em auto;
     }
