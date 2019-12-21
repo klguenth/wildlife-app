@@ -6,7 +6,6 @@ export default class Sighting extends React.Component {
     render() {
         return (
             <div>
-                <Nav />
                 <div className="Sighting">
                     <div className="SightingDate">{this.props.date}</div>
                     <div className="SightingSpecies">{this.props.species}</div>

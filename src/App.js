@@ -15,11 +15,18 @@ export default class App extends React.Component {
     this.state = {}
   }
 
-  renderRoutes() {
+  renderNavRoutes() {
     return (
       <>
-        <Route exact path='/' component={LandingPage} />
-        <Route path='/login' component={Login} />
+        <Link to='/' component={LandingPage} />
+        <Link to='/login' component={Login} />
+      </>
+    )
+  }
+
+  renderMainRoutes() {
+    return (
+      <>
         <Route path='/sightingForm' component={SightingForm} />
         <Route path='/sightingList' component={SightingList} />
       </>
@@ -57,36 +64,16 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <div className="navBar">
-          <Nav />
-        </div>
         <main id='App'>
-          <div class='blurred-box'>
-            <header className="appTitle">
-              <h1>
-                <Link to="/">Wildlife Watch</Link>
-              </h1>
-            </header>
-            <section className="mainSection">
-              {this.renderRoutes()}
-              <h2 className="conserveQuote">"In the end we will conserve only what we love; we will love only what we understand; we will understand only what we are taught." -Baba Dioum</h2>
-              <div className="wwSummary">
-                <h3>Get closer to the natural world.</h3>
-                <h4>Wildlife Watch provides a space to share and record wildlife sightings with the ultimate desire to foster curiousity and inspire conservation efforts around the world.</h4>
-              </div>
-              <div className="wwSummary">
-                <h3>Simplistic Sightings</h3>
-                <h4>We created a clean, stylized interface to record and view animal sightings.</h4>
-              </div>
-              <div className="wwSummary">
-                <h3>Track Species</h3>
-                <h4>Record Species, behavior, and track animal sightings over time.</h4>
-              </div>
-              <div className="wwSummary">
-                <SignUpForm />
-              </div>
-            </section>
-          </div>
+          {this.renderNavRoutes()}
+          <header className="appTitle">
+            <h1>
+              <Link to="/">Wildlife Watch</Link>
+            </h1>
+          </header>
+          <section className="mainSection">
+            {this.renderMainRoutes()}
+          </section>
         </main>
       </div>
     );
