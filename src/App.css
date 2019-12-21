@@ -1,8 +1,4 @@
 * {
     font-family: 'Montserrat', sans-serif;
-}
-
-#App {
-    padding: 75px;
-    text-align: center;
+    box-sizing: border-box;
 }

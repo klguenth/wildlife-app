@@ -1,5 +1,6 @@
 import React from 'react';
 import Nav from './Components/Nav/Nav.js';
+import Header from './Components/Header/Header.js';
 import SignUpForm from './Components/SignUpForm/SignUpForm.js';
 import LandingPage from './Components/LandingPage/LandingPage.js';
 import Login from './Components/Login/Login.js';
@@ -15,20 +16,12 @@ export default class App extends React.Component {
     this.state = {}
   }
 
-  renderNavRoutes() {
-    return (
-      <>
-        <Link to='/' component={LandingPage} />
-        <Link to='/login' component={Login} />
-      </>
-    )
-  }
-
   renderMainRoutes() {
     return (
       <>
         <Route path='/sightingForm' component={SightingForm} />
         <Route path='/sightingList' component={SightingList} />
+        <Route path='signupForm' component={SignUpForm} />
       </>
     );
   }
@@ -64,13 +57,13 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <main id='App'>
-          {this.renderNavRoutes()}
-          <header className="appTitle">
-            <h1>
-              <Link to="/">Wildlife Watch</Link>
-            </h1>
-          </header>
+        <div className="nav">
+          <Nav />
+        </div>
+        <header className='header'>
+          <Header />
+        </header>
+        <main className='App'>
           <section className="mainSection">
             {this.renderMainRoutes()}
           </section>

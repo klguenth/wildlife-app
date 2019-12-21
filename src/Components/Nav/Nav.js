@@ -6,7 +6,7 @@ export default class Nav extends React.Component {
     render() {
         return (
             <div className="topNav">
-                <Link to='/LandingPage'>Home</Link>
+                <Link to='/'>Home</Link>
                 <Link to='/Login'>Login</Link>
                 <Link to='/SightingForm'>New Sighting</Link>
             </div>
