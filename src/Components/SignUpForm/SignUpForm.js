@@ -1,6 +1,4 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
-import SightingList from '../SightingList/SightingList.js';
 import SubmitButton from '../SubmitButton/SubmitButton.js';
 import ResetButton from '../ResetButton/ResetButton.js';
 import './SignUpForm.css';
