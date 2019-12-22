@@ -6,7 +6,7 @@ import LandingPage from './Components/LandingPage/LandingPage.js';
 import Login from './Components/Login/Login.js';
 import SightingForm from './Components/SightingForm/SightingForm.js';
 import SightingList from './Components/SightingList/SightingList.js';
-import { Route, Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import './App.css';
 
 export default class App extends React.Component {

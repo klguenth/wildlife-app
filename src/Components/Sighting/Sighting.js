@@ -1,6 +1,5 @@
 import React from 'react';
 import './Sighting.css';
-import Nav from '../Nav/Nav.js';
 
 export default class Sighting extends React.Component {
     render() {
