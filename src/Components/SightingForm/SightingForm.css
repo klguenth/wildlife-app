@@ -4,12 +4,24 @@
 
 h1 {
     text-align: center;
+    margin: 30px;
+}
+
+#record-sighting {
+    margin-top: 30px;
 }
 
 .form-section {
     color: #000000;
     display: block;
-    margin: 10px auto;
+}
+
+label {
+    margin: auto;
+}
+
+.form-contents {
+    margin: auto;
 }
 
 input {

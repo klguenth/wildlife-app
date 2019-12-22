@@ -1,4 +1,29 @@
 * {
     font-family: 'Montserrat', sans-serif;
+    color: #000000;
     box-sizing: border-box;
+}
+
+.header {
+    margin-top: 100px;
+}
+
+input {
+    border: none;
+    border-bottom: 3px solid #000000;
+    color: #a6a6a6;
+    width: 200px;
+}
+
+input[type="text"] {
+    background: transparent;
+}
+
+::placeholder {
+    color: #a6a6a6;
+    padding-left: 15px;
+}
+
+label {
+    color: #000000;
 }

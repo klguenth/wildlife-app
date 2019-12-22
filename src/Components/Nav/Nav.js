@@ -9,6 +9,7 @@ export default class Nav extends React.Component {
                 <Link to='/'>Home</Link>
                 <Link to='/Login'>Login</Link>
                 <Link to='/SightingForm'>New Sighting</Link>
+                <Link to='/SightingList'>Sighting List</Link>
             </div>
         )
     }

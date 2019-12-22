@@ -1,23 +1,12 @@
-.mainSection {
+* {
+    box-sizing: border-box;
+}
+
+.SignUp {
     text-align: center;
+    margin: auto;
 }
 
 input {
-    border: none;
-    border-bottom: 3px solid #5C8DE0;
-    color: #F1F7F9;
-    width: 200px;
-}
-
-input[type="text"] {
-    background: transparent;
-}
-
-::placeholder {
-    color: #F1F7F9;
-    padding-left: 15px;
-}
-
-label {
-    color: #53BDE0;
+    width: 50px;
 }
