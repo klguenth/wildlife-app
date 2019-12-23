@@ -20,7 +20,7 @@ export default class SightingForm extends React.Component {
         return (
             <div id='sightingFormBody'>
                 <header>
-                    <h1>New Sighting</h1>
+                    New Sighting
                 </header>
                 <form id="record-sighting">
                     <div className="form-section">

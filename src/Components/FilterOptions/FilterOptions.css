@@ -1,14 +1,12 @@
 .filterOptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: auto;
-}
-
-header {
-    margin-left: 300px;
 }
 
 .select{
     color: #000000;
-    margin-left: 300px;
 }
 
 .dropdown {

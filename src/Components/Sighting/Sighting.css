@@ -2,8 +2,58 @@
     box-sizing: border-box;
 }
 
+input[type='checkbox'] {
+    display: none;
+}
+
+.lbl-toggle {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: #000000;
+    cursor: pointer;
+    transition: all 0.25s ease-out;
+}
+
+.lbl-toggle:hover {
+    color:#07B8A4;
+    background-color:#000000;
+}
+
+.lbl-toggle::before {
+    content: ' ';
+    display: inline-block;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid currentColor;
+    vertical-align: middle;
+    transform: translateY(-2px);
+    transition: transform .2s ease-out;
+}
+
+.collapsible-content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .25s ease-in-out;
+}
+
+.toggle:checked + .lbl-toggle + .collapsible-content {
+    max-height: 100vh;
+}
+
+.toggle:checked + .lbl-toggle::before {
+    transform: rotate(90deg) translateX(-3px);
+}
+
+.toggle:checked + .lbl-toggle {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
 .Sighting {
-    margin: auto;
     text-align: left;
-    width: 500px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 800px;
 }
