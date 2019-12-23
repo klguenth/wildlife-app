@@ -6,39 +6,18 @@ export default class FilterOptions extends React.Component {
         return (
             <div className="filterOptions">
                 <header>
-                    <h3>
-                        Filter By
-                    </h3>
+                Filter By:
                 </header>
-                <div className="filterOptions-option">
-                    <label htmlFor="filter-all">
-                        <input type="radio" value="All" id="filterAll" name="filter" />
-                        All
-                    </label>
-                </div>
-                <div className="filterOptions-option">
-                    <label htmlFor="filter-species">
-                        <input type="radio" value="Species" id="filterSpecies" name="filter" />
-                        Species
-                    </label>
-                </div>
-                <div className="filterOptions-option">
-                    <label htmlFor="filter-behavior">
-                        <input type="radio" value="Behavior" id="filterBehavior" name="filter" />
-                        Behavior
-                    </label>
-                </div>
-                <div className="filterOptions-option">
-                    <label htmlFor="filter-location">
-                        <input type="radio" value="Location" id="filterLocation" name="filter" />
-                        Location
-                    </label>
-                </div>
-                <div className="filterOptions-option">
-                    <label htmlFor="filter-date">
-                        <input type="radio" value="Date" id="filterDate" name="filter" />
-                        Date
-                    </label>
+                <div className="dropdown">
+                    <div className="dropdownContent">
+                        <select className="select">
+                            <option value="all">All</option>
+                            <option value="species">Species</option>
+                            <option value="behavior">Behavior</option>
+                            <option value="location">Location</option>
+                            <option value="date">Date</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         );

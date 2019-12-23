@@ -1,8 +1,31 @@
 .filterOptions {
-    display: inline-block;
-    color: #000000;
+    margin: auto;
 }
 
-label {
+header {
+    margin-left: 300px;
+}
+
+.select{
     color: #000000;
+    margin-left: 300px;
+}
+
+.dropdown {
+    margin: auto;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: none;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px #000000;
+    padding: 12px 16px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }

@@ -1,0 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+
+.Sighting {
+    margin: auto;
+    text-align: left;
+    width: 500px;
+}

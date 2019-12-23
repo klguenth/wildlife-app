@@ -6,10 +6,16 @@ export default class SightingList extends React.Component {
     render() {
         return (
             <div>
+                <FilterOptions />
                 <section className="SightingList">
-                    <FilterOptions />
                     <ul>
-                        <Sighting />
+                        <Sighting
+                            title={Sighting.title}
+                            date={Sighting.date}
+                            species={Sighting.species}
+                            location={Sighting.location}
+                            behavior={Sighting.behavior}
+                            details={Sighting.details} />
                     </ul>
                 </section>
             </div>
