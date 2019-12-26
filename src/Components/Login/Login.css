@@ -15,6 +15,7 @@
 }
 
 input {
+    border: none;
     border-bottom: solid 2px #000000;
     width: 20%;
 }
