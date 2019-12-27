@@ -1,26 +1,67 @@
 
-
-
-
-.topNav {
-    position: fixed;
-    top: 20px;
+/*Wrapper*/
+#hamburgerNav {
     width: 100%;
+    background: #ffffff;
+    position: fixed;
+    top: 10px;
+}
+/*Hide Hamburger*/
+#hamburgerNav label, #hamburger {
+    display: none;
 }
 
-.topNav a {
-    position: relative;
-    margin-left: 40px;
-    margin-top: 40px;
+/*Menu Items*/
+#hamburgerNav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#hamburgerNav ul li a {
     text-decoration: none;
-    color: #000000;
-    font-family: 'Montserrat', sans-serif;
+}
+#hamburgerNav ul li {
+    display: inline-block;
+    padding: 10px;
+    box-sizing: border-box;
     border: 1px solid;
     border-radius: 3px;
     padding: 10px;
+    margin: 5px;
+    color: #000000;
     transition: all 0.2s;
 }
-.topNav a:hover {
+#hamburgerNav ul li:hover {
     color: #07B8A4;
     background-color: #000000;
+}
+#hamburgerNav ul a:hover {
+    color: #07B8A4;
+}
+
+/*small screens*/
+@media screen and (max-width: 720px) {
+    /*show hamburger*/
+    #hamburgerNav label {
+        display: inline-block;
+        color: #000000;
+        font-family: 'Montserrat', sans-serif;
+        border: 1px solid;
+        border-radius: 3px;
+        padding: 10px;
+    }
+    /*break items down into vertical*/
+    #hamburgerNav ul li {
+        display: block;
+    }
+    #hamburgerNav ul li {
+        border-top: 1px solid #000000;
+    }
+    /*toggle show/hide menu on checkbox click*/
+    #hamburgerNav ul {
+        display: none;
+    }
+    #hamburgerNav input:checked ~ ul {
+    display: block;
+    }
 }
