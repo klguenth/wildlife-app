@@ -46,13 +46,20 @@
         display: inline-block;
         color: #000000;
         font-family: 'Montserrat', sans-serif;
-        border: 1px solid;
+        font-size: 20px;
+        border: none;
         border-radius: 3px;
         padding: 10px;
+    }
+    /*color change*/
+    #hamburgerNav label:hover {
+        color: #07B8A4;
     }
     /*break items down into vertical*/
     #hamburgerNav ul li {
         display: block;
+        width: 150px;
+        text-align: center;
     }
     #hamburgerNav ul li {
         border-top: 1px solid #000000;
@@ -62,6 +69,6 @@
         display: none;
     }
     #hamburgerNav input:checked ~ ul {
-    display: block;
+        display: block;
     }
 }
