@@ -35,7 +35,8 @@
     color: #07B8A4;
     background-color: #000000;
 }
-#hamburgerNav ul a:hover {
+#hamburgerNav ul li a:hover {
+    background-color: #000000;
     color: #07B8A4;
 }
 
