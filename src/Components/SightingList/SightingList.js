@@ -9,7 +9,7 @@ export default class SightingList extends React.Component {
                 <SortOptions />
                 <section className="SightingList">
                     <ul>
-                        <Sighting sightings={this.props.sightings} />
+                        <Sighting sightings={this.sightings} />
                     </ul>
                 </section>
             </div>
