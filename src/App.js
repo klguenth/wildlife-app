@@ -13,7 +13,9 @@ export default class App extends React.Component {
   
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {
+      loggedIn: true,
+    }
   }
 
   renderMainRoutes() {
@@ -23,7 +25,7 @@ export default class App extends React.Component {
         <Route path='/sightingForm' component={SightingForm} />
         <Route path='/sightingList' component={SightingList} />
         <Route path='/signupForm' component={SignUpForm} />
-        <Route path='/landingPage' component={LandingPage} />
+        <Route path='/' component={LandingPage} />
       </>
     );
   }
@@ -60,7 +62,7 @@ export default class App extends React.Component {
     return (
       <div>
         <div className="nav">
-          <Nav />
+          <Nav loggedIn={this.state.loggedIn} />
         </div>
         <header className='header'>
           <Header />

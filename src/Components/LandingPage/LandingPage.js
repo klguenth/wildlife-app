@@ -1,13 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Nav from '../Nav/Nav.js';
 import './LandingPage.css';
 
 export default class LandingPage extends React.Component {
     render() {
         return (
             <div>
-                <Nav />
                 <section className="mainSection">
                     <h2 className="conserveQuote">
                         "In the end we will conserve only what we love; we will love only what we understand; we will understand only what we are taught." -Baba Dioum

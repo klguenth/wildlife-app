@@ -6,7 +6,7 @@ export default class FilterOptions extends React.Component {
         return (
             <div className="filterOptions">
                 <header>
-                Filter By:
+                Sort By:
                 </header>
                 <div className="dropdown">
                     <div className="dropdownContent">
