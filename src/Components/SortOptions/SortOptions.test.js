@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import FilterOptions from './FilterOptions';
+import SortOptions from './SortOptions';
 
-describe('FilterOptions', () => {
+describe('SortOptions', () => {
   it('should render without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<FilterOptions/>, div);
+    ReactDOM.render(<SortOptions/>, div);
     ReactDOM.unmountComponentAtNode(div);
   })
 });

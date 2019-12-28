@@ -2,11 +2,11 @@
     box-sizing: border-box;
 }
 
-.SignUp {
-    text-align: center;
+.signUp {
+    text-align: left;
     margin: auto;
 }
 
 input {
-    width: 50px;
+    width: 50%;
 }

@@ -1,12 +1,11 @@
 import React from 'react';
 import SubmitButton from '../SubmitButton/SubmitButton.js';
-import ResetButton from '../ResetButton/ResetButton.js';
 import './SignUpForm.css';
 
 export default class SignUpForm extends React.Component {
     render() {
         return (
-            <div className="SignUp">
+            <div className="signUp">
                 <h2>Start Tracking</h2>
                 <form class='signup-form'>
                 <div>
@@ -26,7 +25,6 @@ export default class SignUpForm extends React.Component {
                     <input placeholder='WhaLeS1!' type="text" name='password' id='password' />
                 </div>
                     <SubmitButton />
-                    <ResetButton />
                 </form>
             </div>
         )

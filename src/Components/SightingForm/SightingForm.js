@@ -1,6 +1,5 @@
 import React from 'react';
 import SubmitButton from '../SubmitButton/SubmitButton.js';
-import ResetButton from '../ResetButton/ResetButton.js';
 import './SightingForm.css';
 
 export default class SightingForm extends React.Component {
@@ -44,7 +43,6 @@ export default class SightingForm extends React.Component {
                         <input type="date" placeholder="2019-07-01" min="2000-01-01" max="2019-12-1" required="" />
                     </div>
                     <SubmitButton />
-                    <ResetButton />
                 </form>
             </div>
         )

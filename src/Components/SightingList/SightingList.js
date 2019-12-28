@@ -1,21 +1,15 @@
 import React from 'react';
 import Sighting from '../Sighting/Sighting.js';
-import FilterOptions from '../FilterOptions/FilterOptions.js';
+import SortOptions from '../SortOptions/SortOptions.js';
 
 export default class SightingList extends React.Component {
     render() {
         return (
             <div>
-                <FilterOptions />
+                <SortOptions />
                 <section className="SightingList">
                     <ul>
-                        <Sighting
-                            title={Sighting.title}
-                            date={Sighting.date}
-                            species={Sighting.species}
-                            location={Sighting.location}
-                            behavior={Sighting.behavior}
-                            details={Sighting.details} />
+                        <Sighting sightings={this.props.sightings} />
                     </ul>
                 </section>
             </div>

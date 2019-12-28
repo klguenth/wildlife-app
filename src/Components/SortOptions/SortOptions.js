@@ -1,10 +1,10 @@
 import React from 'react';
-import './FilterOptions.css';
+import './SortOptions.css';
 
-export default class FilterOptions extends React.Component {
+export default class SortOptions extends React.Component {
     render() {
         return (
-            <div className="filterOptions">
+            <div className="sortOptions">
                 <header>
                 Sort By:
                 </header>

@@ -30,33 +30,11 @@ export default class App extends React.Component {
     );
   }
 
-
   sightings = [
-    {
-      id: 0,
-      briefDescription: 'Sea Otters Rafting',
-      species: 'Sea Otters',
-      detailedDescription: 'Sea otters sleeping in groups. Sea otters will often hold hands while they sleep in order to not drift away from each other. This behavior is called rafting. 6 otters were observed rafting together.',
-      location: 'Monterey, California',
-      date: '/*look up how to enter date*/',
-    },
-    {
-      id: 1,
-      briefDescription: 'Humpback Whales Breaching',
-      species: 'Humpback Whales',
-      detailedDescription: 'Humpback whales breach for a variety of reasons: most often breaching is a way to communicate. It can also be used as a hunting method to stun prey, and sometimes to simply scratch an itch. A small family group of 4 whales were observed breaching together as a form of play.',
-      location: 'Los Angeles, California',
-      date: '/*look up how to enter date*/',
-    },
-    {
-      id: 2,
-      briefDescription: 'Bottlenose Dolphins Hunting',
-      species: 'Bottlenose Dolphins',
-      detailedDescription: 'Bottlenose Dolphins hunting together in a group. Some dolphins would school the prey together while others fed, and then the roles would switch.',
-      location: 'San Francisco, California',
-      date: '/*look up how to enter date*/',
-    }
-  ];
+    {title: 'Sea Otters Rafting', date: '10/03/2019', species: 'North American Sea Otter', location: 'Monterey, CA', behavior: 'sleeping', detailedBehavior: 'A group of 4 Sea Otters sleeping together in a raft. Sea Otters were noticed to be linking paws, called "rafting"'},
+    {title: 'Humpback Whales Breaching', date: '8/30/2019', species: 'Humpback Whales', location: 'San Francisco, CA', behavior: 'playing', detailedBehavior: 'A group of 6 Humpback Whales were observed displaying breaching behavior. It appeared to be a playful behavior, as prey did not seem to be in the animal. They were observed for about 15 minutes to be breaching and chasing each other.'},
+    {title: 'White Shark Feeding', date: '9/12/2019', species: 'White Shark', location: 'Santa Barbara, CA', behavior: 'feeding', detailedBehavior: 'A single White Shark was observed feeding on a whale carcass just offshore. It appeared to be a juvenile male, and was not at all concerned with the presence of observers. It was singularly focused on the food and seemed to gorge itself.'},
+];
 
   render() {
     return (
