@@ -10,6 +10,9 @@ export default class SightingList extends React.Component {
                 <section className="SightingList">
                     <ul>
                         <Sighting sightings={this.props.sightings} />
+                        <Sighting sightings={this.props.sightings} />
+                        <Sighting sightings={this.props.sightings} />
+                        <Sighting sightings={this.props.sightings} />
                     </ul>
                 </section>
             </div>
