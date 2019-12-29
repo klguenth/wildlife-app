@@ -14,8 +14,8 @@
     transition: all 0.2s;
 }
 .submitButton:hover {
-    color:#07B8A4;
-    background-color:#000000;
+    color:#ffffff;
+    background-color:#58703A;
 }
 @media all and (max-width:30em) {
     .submitButton {

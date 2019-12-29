@@ -31,7 +31,7 @@ export default class App extends React.Component {
         <Route path='/sightingForm' component={SightingForm} />
         <Route path="/sightingList" render={() => <SightingList sightings={this.props.sightings} />} />
         <Route path='/signupForm' component={SignUpForm} />
-        <Route path='/' component={LandingPage} />
+        <Route exact path='/' component={LandingPage} />
       </>
     );
   }
@@ -45,11 +45,13 @@ export default class App extends React.Component {
         <header className='header'>
           <Header />
         </header>
-        <main className='App'>
-          <section className="mainSection">
-            {this.renderMainRoutes()}
-          </section>
-        </main>
+        <div className='blurred-box'>
+          <main className='App'>
+              <section className="mainSection">
+                {this.renderMainRoutes()}
+              </section>
+            </main>
+        </div>
       </div>
     );
   }

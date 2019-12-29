@@ -2,7 +2,6 @@
 /*Wrapper*/
 #hamburgerNav {
     width: 100%;
-    background: #ffffff;
     position: fixed;
     top: 10px;
 }
@@ -32,12 +31,12 @@
     transition: all 0.2s;
 }
 #hamburgerNav ul li:hover {
-    color: #07B8A4;
-    background-color: #000000;
+    color: #ffffff;
+    background-color: #58703A;
 }
 #hamburgerNav ul li a:hover {
-    background-color: #000000;
-    color: #07B8A4;
+    background-color: #58703A;
+    color: #ffffff;
 }
 
 /*small screens*/
@@ -45,7 +44,7 @@
     /*show hamburger*/
     #hamburgerNav label {
         display: inline-block;
-        color: #000000;
+        color: #ffffff;
         font-family: 'Montserrat', sans-serif;
         font-size: 20px;
         border: none;
@@ -54,7 +53,7 @@
     }
     /*color change*/
     #hamburgerNav label:hover {
-        color: #07B8A4;
+        color: #ffffff;
     }
     /*break items down into vertical*/
     #hamburgerNav ul li {
@@ -63,7 +62,7 @@
         text-align: center;
     }
     #hamburgerNav ul li {
-        border-top: 1px solid #000000;
+        border-top: 1px solid #ffffff;
     }
     /*toggle show/hide menu on checkbox click*/
     #hamburgerNav ul {
