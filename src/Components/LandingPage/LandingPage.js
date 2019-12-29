@@ -16,7 +16,7 @@ export default class LandingPage extends React.Component {
                     </div>
                     <div className="wwSummary">
                         <h3>Simplistic Sightings</h3>
-                        <h4>We created a clean, stylized interface to record and view animal sightings.</h4>
+                        <h4>We provide a clean, stylized interface to record and view animal sightings.</h4>
                     </div>
                     <div className="wwSummary">
                         <h3>Track Species</h3>
