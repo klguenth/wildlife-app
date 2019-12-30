@@ -42,9 +42,7 @@ export default class App extends React.Component {
         <div className="nav">
           <Nav loggedIn={this.state.loggedIn} />
         </div>
-        <header className='header'>
           <Header />
-        </header>
         <div className='blurred-box'>
           <main className='App'>
               <section className="mainSection">

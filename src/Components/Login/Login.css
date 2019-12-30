@@ -6,12 +6,10 @@
 
 .usernameField label {
     color: #000000;
-    border-bottom: solid 2px #000000;
 }
 
 .passwordField label {
     color: #000000;
-    border-bottom: solid 2px #000000;
 }
 
 input {
