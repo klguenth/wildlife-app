@@ -10,8 +10,8 @@ export default class LandingPage extends React.Component {
                     <h2 className="conserveQuote">
                         "In the end we will conserve only what we love; we will love only what we understand; we will understand only what we are taught." -Baba Dioum
                     </h2>
-                    <div className="photoOne">
-                        <img src={'./Photos/seal.jpeg'} alt="seal"></img>
+                    <div className="imgContainer">
+                        <img src={'./Photos/humpback.jpeg'} alt="humpback whale"></img>
                     </div>
                     <div className="wwSummaries">
                         <div className="wwSummary1">

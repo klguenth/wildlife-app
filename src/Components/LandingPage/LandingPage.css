@@ -6,8 +6,35 @@
 }
 
 .conserveQuote {
-    background-color: #585858;
-    padding: 100px;
+    background-color: #ffffff;
+    padding: 200px;
     margin: 0px;
     text-align: center;
+}
+
+.imgContainer {
+    background-color: #585858;
+    height: 100px;
+    width: 100%;
+    padding: 100px;
+    text-align: center;
+}
+
+.wwSummaries {
+    width: 100%;
+}
+
+.wwSummary1 {
+    background-color: #58703A;
+    padding: 100px;
+}
+
+.wwSummary2 {
+    background-color: #88AD5A;
+    padding: 75px;
+}
+
+.wwSummary3 {
+    background-color: #A5BB8A;
+    padding: 50px;
 }
