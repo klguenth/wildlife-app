@@ -6,8 +6,11 @@ export default class SightingList extends React.Component {
     render() {
         return (
             <div>
+                <header className="sightingListHeader">
+                    Sighting List
+                </header>
                 <SortOptions />
-                <section className="SightingList">
+                <section className="sightingList">
                     <ul>
                         <Sighting sightings={this.props.sightings} />
                         <Sighting sightings={this.props.sightings} />

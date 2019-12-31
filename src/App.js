@@ -1,6 +1,5 @@
 import React from 'react';
 import Nav from './Components/Nav/Nav.js';
-import Header from './Components/Header/Header.js';
 import SignUpForm from './Components/SignUpForm/SignUpForm.js';
 import LandingPage from './Components/LandingPage/LandingPage.js';
 import Login from './Components/Login/Login.js';
@@ -42,13 +41,12 @@ export default class App extends React.Component {
         <div className="nav">
           <Nav loggedIn={this.state.loggedIn} />
         </div>
-          <Header />
         <div className='blurred-box'>
-          <main className='App'>
-              <section className="mainSection">
-                {this.renderMainRoutes()}
-              </section>
-            </main>
+        <main className='App'>
+            <section className="mainSection">
+              {this.renderMainRoutes()}
+            </section>
+          </main>
         </div>
       </div>
     );

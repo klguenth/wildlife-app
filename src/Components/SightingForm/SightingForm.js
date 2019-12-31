@@ -17,34 +17,36 @@ export default class SightingForm extends React.Component {
 
     render() {
         return (
-            <div id='sightingFormBody'>
+            <div id='sightingForm'>
                 <header>
-                    New Sighting
+                New Sighting
                 </header>
-                <form id="record-sighting">
-                    <div className="form-section">
-                        <label htmlFor="sighting-title">Title: </label>
-                        <input type="text" className="sighting-title" placeholder="Humpbacks Feeding" required />
-                    </div>
-                    <div className="form-section">
-                        <label htmlFor="species-name">Species: </label>
-                        <input type="text" className="species-title" placeholder="Humpback Whale" required />
-                    </div>
-                    <div className="form-section">
-                        <label htmlFor="behavior-short">Behavior: </label>
-                        <input type="text" className="behavior-keyword" placeholder="feeding" required />
-                    </div>
-                    <div className="form-section">
-                        <label htmlFor="behavior-record">Details: </label>
-                        <textarea className="detailed-record" placeholder="Enter sighting details here" rows="15" required />
-                    </div>
-                    <div className="form-section">
-                        <label htmlFor="sighting-date">Date: </label>
-                        <input type="date" placeholder="2019-07-01" min="2000-01-01" max="2019-12-1" required="" />
-                    </div>
-                    <SubmitButton />
-                </form>
+                <div id='sightingFormBody'>
+                    <form id="record-sighting">
+                        <div className="form-section">
+                            <label htmlFor="sighting-title">Title: </label>
+                            <input type="text" className="sighting-title" placeholder="Humpbacks Feeding" required />
+                        </div>
+                        <div className="form-section">
+                            <label htmlFor="species-name">Species: </label>
+                            <input type="text" className="species-title" placeholder="Humpback Whale" required />
+                        </div>
+                        <div className="form-section">
+                            <label htmlFor="behavior-short">Behavior: </label>
+                            <input type="text" className="behavior-keyword" placeholder="feeding" required />
+                        </div>
+                        <div className="form-section">
+                            <label htmlFor="behavior-record">Details: </label>
+                            <textarea className="detailed-record" placeholder="Enter sighting details here" rows="15" required />
+                        </div>
+                        <div className="form-section">
+                            <label htmlFor="sighting-date">Date: </label>
+                            <input type="date" placeholder="2019-07-01" min="2000-01-01" max="2019-12-1" required="" />
+                        </div>
+                        <SubmitButton />
+                    </form>
+                </div>
             </div>
-        )
+        );
     }
 }

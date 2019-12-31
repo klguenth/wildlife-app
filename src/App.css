@@ -3,6 +3,10 @@
     color: #000000;
 }
 
+body {
+    padding-top: 50px;
+}
+
 .App {
     display: flex;
     flex-direction: column;
@@ -34,4 +38,5 @@ input[type="date"] {
 
 label {
     color: #000000;
+    width: 100px;
 }

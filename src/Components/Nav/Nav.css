@@ -4,6 +4,8 @@
     width: 100%;
     position: fixed;
     top: 10px;
+    z-index: 10;
+    background-color: #ffffff;
 }
 /*Hide Hamburger*/
 #hamburgerNav label, #hamburger {
@@ -43,7 +45,7 @@
     /*show hamburger*/
     #hamburgerNav label {
         display: inline-block;
-        color: #ffffff;
+        color: #58703A;
         font-family: 'Montserrat', sans-serif;
         font-size: 20px;
         border: none;

@@ -7,11 +7,14 @@ export default class LandingPage extends React.Component {
         return (
             <div>
                 <section className="mainSection">
-                    <h2 className="conserveQuote">
-                        "In the end we will conserve only what we love; we will love only what we understand; we will understand only what we are taught." -Baba Dioum
-                    </h2>
-                    <div className="imgContainer">
-                        <img src={'./Photos/humpback.jpeg'} alt="humpback whale"></img>
+                    <header className="mainHeader">
+                        Wildlife Watch
+                    </header>
+                    <div className="conserveQuote">
+                        <h2>"In the end we will conserve only what we love; we will love only what we understand; we will understand only what we are taught." -Baba Dioum</h2>
+                    </div>
+                    <div className="imgContainer1">
+                        <img src={require('./humpback.jpeg')} alt="humpback whale"></img>
                     </div>
                     <div className="wwSummaries">
                         <div className="wwSummary1">
@@ -20,15 +23,18 @@ export default class LandingPage extends React.Component {
                         </div>
                         <div className="wwSummary2">
                             <h3>Simplistic Sightings</h3>
-                            <h4>We provide a clean, stylized interface to record and view animal sightings.</h4>
+                            <h4>Utilizing a clean, stylized interface to record and view animal sightings.</h4>
                         </div>
                         <div className="wwSummary3">
                             <h3>Track Species</h3>
-                            <h4>Record Species, behavior, and track animal sightings over time.</h4>
+                            <h4>Record varieties of animal species, monitor animal behavior, and track sightings over time.</h4>
+                            <Link to='/SignUpForm'>Sign Up</Link>
                         </div>
                     </div>
+                    <div className="imgContainer2">
+                        <img src={require('./seal.jpeg')} alt="seal"></img>
+                    </div>
                 </section>
-                <Link to='/SignUpForm'>Sign Up</Link>
             </div>
         );
     }
