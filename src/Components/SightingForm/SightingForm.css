@@ -2,14 +2,10 @@
 #sightingForm header {
     width: 100%;
     background-color: #58703A;
-    font-size: 40px;
-    padding: 20px;
+    font-size: 30px;
+    padding: 30px;
+    margin: 30px;
 }
-
-/*#sightingFormBody {
-    display: flex;
-    max-width: 800px;
-}*/
 
 #record-sighting {
     margin-top: 40px;

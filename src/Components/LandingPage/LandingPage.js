@@ -11,7 +11,7 @@ export default class LandingPage extends React.Component {
                         Wildlife Watch
                     </header>
                     <div className="conserveQuote">
-                        <h2>"In the end we will conserve only what we love; we will love only what we understand; we will understand only what we are taught." -Baba Dioum</h2>
+                        <p>"In the end we will conserve only what we love; we will love only what we understand; we will understand only what we are taught." -Baba Dioum</p>
                     </div>
                     <div className="imgContainer1">
                         <img src={require('./humpback.jpeg')} alt="humpback whale"></img>
