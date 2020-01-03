@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .mainSection {
     display: flex;
     flex-direction: column;
@@ -19,12 +23,12 @@
 
 .conserveQuote {
     background-color: #ffffff;
-    width: 100%;
+    width: 75%;
     height: 300px;
     line-height: 275px;
     font-size: 20px;
     margin: 50px;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .imgContainer1 {

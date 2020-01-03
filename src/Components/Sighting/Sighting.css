@@ -6,6 +6,7 @@ input[type='checkbox'] {
     display: none;
 }
 
+/*lable css*/
 .lbl-toggle {
     display: block;
     text-align: center;
@@ -53,6 +54,7 @@ input[type='checkbox'] {
     border-bottom-left-radius: 0;
 }
 
+/*container div*/
 .sighting {
     text-align: center;
     border: 1px solid #000000;

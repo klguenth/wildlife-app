@@ -5,9 +5,9 @@ export default class SortOptions extends React.Component {
     render() {
         return (
             <div className="sortOptions">
-                <header>
+                <h2>
                 Sort By:
-                </header>
+                </h2>
                 <div className="dropdown">
                     <div className="dropdownContent">
                         <select className="select">
