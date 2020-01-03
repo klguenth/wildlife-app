@@ -41,13 +41,11 @@ export default class App extends React.Component {
         <div className="nav">
           <Nav loggedIn={this.state.loggedIn} />
         </div>
-        <div className='blurred-box'>
         <main className='App'>
             <section className="mainSection">
               {this.renderMainRoutes()}
             </section>
           </main>
-        </div>
       </div>
     );
   }

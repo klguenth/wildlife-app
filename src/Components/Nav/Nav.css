@@ -8,15 +8,21 @@
     background-color: #ffffff;
 }
 /*Hide Hamburger*/
-#hamburgerNav label, #hamburger {
+#hamburgerNav label, #hamburger, .pawPrint {
     display: none;
 }
 
 /*Menu Items*/
 #hamburgerNav ul {
     list-style-type: none;
-    margin: 0;
+    margin: 10px;
     padding: 0;
+}
+.pawPrint {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
 }
 #hamburgerNav ul li a {
     text-decoration: none;

@@ -15,6 +15,7 @@ export default class Nav extends React.Component {
                 <label htmlFor="hamburger">&#9776;</label>
                 <input type="checkbox" id="hamburger"/>
                     <ul>
+                    <img src={require("./print.png")} className="pawPrint" alt="pawprint"></img>
                         <li><Link to='/'>Home</Link></li>
                         <li><Link to='/Login'>Login</Link></li>
                         {buttons}
