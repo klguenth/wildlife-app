@@ -6,7 +6,8 @@
 }
 
 header {
-    font-size: 36px;
+    font-size: 30px;
+    width: 100%;
 }
 
 .usernameField {
