@@ -41,11 +41,9 @@ export default class App extends React.Component {
         <div className="nav">
           <Nav loggedIn={this.state.loggedIn} />
         </div>
-        <main className='App'>
-            <section className="mainSection">
-              {this.renderMainRoutes()}
-            </section>
-          </main>
+        <main className='app'>
+          {this.renderMainRoutes()}
+        </main>
       </div>
     );
   }

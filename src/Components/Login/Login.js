@@ -7,7 +7,7 @@ export default class Login extends React.Component {
     render() {
         return (
             <form className="loginForm">
-                <header>
+                <header className="loginHeader">
                     Log In
                 </header>
                 <div className="usernameField">
