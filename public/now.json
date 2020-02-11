@@ -1,5 +1,6 @@
 {
     "version": 2,
+    "alias": "klguenth-wildlife-app",
     "name": "wildlife-app",
     "routes": [
         { "handle": "filesystem" },
