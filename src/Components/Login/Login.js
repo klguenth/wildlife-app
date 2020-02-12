@@ -7,10 +7,10 @@ export default class Login extends React.Component {
     handleSubmit = (ev) => {
         ev.preventDefault()
         const { username, password } = ev.target
-        saveCredentials({
+        /*saveCredentials({
             username: username.value,
             password: password.value,
-        })
+        })*/
     }
     render() {
         return (
