@@ -1,11 +1,13 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Nav from './Components/Nav/Nav.js';
 import SignUpForm from './Components/SignUpForm/SignUpForm.js';
 import LandingPage from './Components/LandingPage/LandingPage.js';
 import Login from './Components/Login/Login.js';
 import SightingForm from './Components/SightingForm/SightingForm.js';
 import SightingList from './Components/SightingList/SightingList.js';
-import { Route } from 'react-router-dom';
+import config from './config';
+import ApiContext from './ApiContext';
+import { Route, Link } from 'react-router-dom';
 import './App.css';
 
 export default class App extends React.Component {
@@ -14,7 +16,30 @@ export default class App extends React.Component {
     super(props)
     this.state = {
       loggedIn: true,
-    }
+      sightings: []
+    };
+  }
+
+  componentDidMount() {
+      fetch(`${config.REACT_APP_API_ENDPOINT}/api/sightings`)
+        .then(res => {
+          if(!res.ok) {
+            throw new Error('Something went wrong.');
+          }
+          return res;
+        })
+        .then(res => res.json())
+        .then(data => {
+          this.setState({
+            sightings: data,
+            error: null
+          });
+        })
+        .catch(err => {
+          this.setState({
+            error: err.message
+          });
+        });
   }
 
   sightings = [

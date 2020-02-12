@@ -1,9 +1,40 @@
 import React from 'react';
+import ApiContext from '../src/ApiContext';
+import config from '../src/config';
 import './Sighting.css';
 
 export default class Sighting extends React.Component {
+    static defaultProps = {
+        onDeleteSighting: () => {},
+    }
+
+    static contextType = ApiContext;
+
+    handleDelete = e => {
+        e.preventDefault()
+        const sightingId = this.props.id
+        fetch(`${config.REACT_APP_API_ENDPOINT}/api/sightings/${sightingId}`, {
+            method: 'DELETE',
+            headers: {
+                'content-type': 'application/json'
+            },
+        })
+        .then( res => {
+            if (!res.ok)
+                return res.json().then(e => Promise.reject(e))
+            return res;
+        })
+        .then(() => {
+            this.deleteSighting(sightingId)
+            this.props.onDeleteSighting(sightingId)
+        })
+        .catch(error => {
+            console.error({ error })
+        })
+    }
 
     render() {
+        const { title, date, species, location, behavior, detailed_behavior } = this.props
         return (
             <div>
                 <div className="wrap-collapsible">
