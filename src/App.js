@@ -61,15 +61,20 @@ export default class App extends React.Component {
   }
 
   render() {
+    const value = {
+      sightings: this.state.sightings,
+      deleteSighting: this.handleDeleteSighting,
+      addSighting: this.handleAddSighting
+    };
     return (
-      <div>
+      <ApiContext.Provider value={value}>
         <div className="nav">
           <Nav loggedIn={this.state.loggedIn} />
         </div>
         <main className='app'>
           {this.renderMainRoutes()}
         </main>
-      </div>
+      </ApiContext.Provider>
     );
   }
 }

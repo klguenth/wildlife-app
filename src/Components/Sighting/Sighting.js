@@ -1,6 +1,6 @@
 import React from 'react';
 import ApiContext from '../src/ApiContext';
-import config from '../src/config';
+import config from './src/config';
 import './Sighting.css';
 
 export default class Sighting extends React.Component {
