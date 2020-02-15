@@ -16,7 +16,7 @@ export default class SightingForm extends React.Component {
         newSighting.brief_description = event.target.brief_description.value;
         newSighting.detailed_description = event.target.detailed_description.value;
 
-    fetch(`${config.REACT_APP_API_ENDPOINT}/api/sightings/sighting`, {
+    fetch(`${config.REACT_APP_API_ENDPOINT}/api/sightings`, {
         method: 'POST',
         headers: {
             'content-type': 'application/json'
