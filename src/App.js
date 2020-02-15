@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Nav from './Components/Nav/Nav.js';
 import SignUpForm from './Components/SignUpForm/SignUpForm.js';
 import LandingPage from './Components/LandingPage/LandingPage.js';
@@ -7,7 +7,7 @@ import SightingForm from './Components/SightingForm/SightingForm.js';
 import SightingList from './Components/SightingList/SightingList.js';
 import config from './config';
 import ApiContext from './ApiContext';
-import { Route, Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import './App.css';
 
 export default class App extends React.Component {
@@ -47,6 +47,18 @@ export default class App extends React.Component {
     {title: 'Humpback Whales Breaching', date: '8/30/2019', species: 'Humpback Whales', location: 'San Francisco, CA', behavior: 'playing', detailedBehavior: 'A group of 6 Humpback Whales were observed displaying breaching behavior. It appeared to be a playful behavior, as prey did not seem to be in the animal. They were observed for about 15 minutes to be breaching and chasing each other.'},
     {title: 'White Shark Feeding', date: '9/12/2019', species: 'White Shark', location: 'Santa Barbara, CA', behavior: 'feeding', detailedBehavior: 'A single White Shark was observed feeding on a whale carcass just offshore. It appeared to be a juvenile male, and was not at all concerned with the presence of observers. It was singularly focused on the food and seemed to gorge itself.'},
 ];
+
+  handleDeleteSighting = sightingId => {
+    this.setState({
+      sightings: this.state.sightings.filter(sighting => sighting.sighting_id !== sightingId)
+    });
+  };
+
+  handleAddSighting = sighting => {
+    this.setState({
+      sightings: [...this.state.sightings, sighting]
+    });
+  }
 
   renderMainRoutes() {
     return (

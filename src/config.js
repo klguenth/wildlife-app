@@ -1,3 +1,3 @@
-export default {
-    REACT_APP_API_ENDPOINT: `https://hidden-dusk-74862.herokuapp.com/`,
+module.exports = {
+    REACT_APP_API_ENDPOINT: process.env.REACT_APP_API_ENDPOINT || 'http://localhost:8000'
 }

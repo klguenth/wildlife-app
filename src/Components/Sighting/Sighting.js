@@ -1,6 +1,6 @@
 import React from 'react';
-import ApiContext from '../src/ApiContext';
-import config from './src/config';
+import ApiContext from '../../ApiContext.js';
+import config from '../../config.js';
 import './Sighting.css';
 
 export default class Sighting extends React.Component {
@@ -12,7 +12,7 @@ export default class Sighting extends React.Component {
 
     handleDelete = e => {
         e.preventDefault()
-        const sightingId = this.props.id
+        const sightingId = this.props.sighting_id
         fetch(`${config.REACT_APP_API_ENDPOINT}/api/sightings/${sightingId}`, {
             method: 'DELETE',
             headers: {
@@ -34,7 +34,7 @@ export default class Sighting extends React.Component {
     }
 
     render() {
-        const { title, date, species, location, behavior, detailed_behavior } = this.props
+        //const { title, date, species, location, behavior, detailed_behavior } = this.props
         return (
             <div>
                 <div className="wrap-collapsible">
