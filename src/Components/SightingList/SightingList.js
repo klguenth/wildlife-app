@@ -13,9 +13,11 @@ export default class SightingList extends React.Component {
     static contextType = ApiContext
 
     render() {
-        const sightingId = this.props.match.params
+        const { sightingId } = this.props.match.params
         console.log(sightingId);
-        const sightings = this.props.sightings
+        const sightings = sightingId
+            ? findSighting(this.props.sightings, sightingId)
+            : this.props.sightings;
         console.log(sightings);
         const getSightingsForList = findSighting(sightings, sightingId) || []
         return (
