@@ -19,7 +19,6 @@ export default class SightingList extends React.Component {
             ? findSighting(this.props.sightings, sightingId)
             : this.props.sightings;
         console.log(sightings);
-        const getSightingsForList = findSighting(sightings, sightingId) || []
         return (
             <>
                 <header>
@@ -28,7 +27,7 @@ export default class SightingList extends React.Component {
                 <SortOptions />
                 <section className="sightingList">
                     <ul>
-                        {getSightingsForList.map(sighting =>
+                        {sightings.map(sighting =>
                             <li key={sighting.sighting_id}>
                                 <Sighting
                                     sighting_id={sighting.sighting_id}
