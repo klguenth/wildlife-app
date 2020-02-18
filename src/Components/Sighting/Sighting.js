@@ -26,7 +26,7 @@ export default class Sighting extends React.Component {
             return res;
         })
         .then(() => {
-            this.deleteSighting(sightingId)
+            this.context.deleteSighting(sightingId)
             this.props.onDeleteSighting(sightingId)
         })
         .catch(error => {
@@ -35,7 +35,6 @@ export default class Sighting extends React.Component {
     }
 
     render() {
-        //const { title, date, species, location, behavior, detailed_behavior } = this.props
         return (
             <div>
                 <div className="wrap-collapsible">
@@ -43,12 +42,12 @@ export default class Sighting extends React.Component {
                     <label htmlFor="collapsible" className="lbl-toggle"> Title</label>
                         <div className="collapsible-content">
                             <div className="sighting">
-                                <div className="sightingTitle">Title: This is an example title{this.props.title}</div>
-                                <div className="sightingDate">Date: This is an example date{this.props.date}</div>
-                                <div className="sightingSpecies">Species: This is an example species{this.props.species}</div>
-                                <div className="sightingLocation">Location: This is an example location{this.props.location}</div>
-                                <div className="sightingBehavior">Behavior: This is an example behavior{this.props.brief_behavior}</div>
-                                <p className="sightingDetailedBehavior">Details: This is example detail. This is example detail. This is example detail.{this.props.detailed_behavior}</p>
+                                <div className="sightingTitle">{this.props.title}</div>
+                                <div className="sightingDate">{this.props.sighting_date}</div>
+                                <div className="sightingSpecies">{this.props.species}</div>
+                                <div className="sightingLocation">{this.props.sighting_location}</div>
+                                <div className="sightingBehavior">{this.props.brief_description}</div>
+                                <p className="sightingDetailedBehavior">{this.props.detailed_description}</p>
                             </div>
                         </div>
                     <button 
