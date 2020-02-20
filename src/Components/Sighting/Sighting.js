@@ -6,6 +6,7 @@ import './Sighting.css';
 export default class Sighting extends React.Component {
     static defaultProps = {
         onDeleteSighting: () => {},
+        onEditSighting: () => {}
     }
 
     static contextType = ApiContext;
@@ -39,7 +40,7 @@ export default class Sighting extends React.Component {
             <div>
                 <div className="wrap-collapsible">
                     <input id="collapsible" type="checkbox" className="toggle" />
-                    <label htmlFor="collapsible" className="lbl-toggle"> Title</label>
+                    <label htmlFor="collapsible" className="lbl-toggle">{this.props.title}</label>
                         <div className="collapsible-content">
                             <div className="sighting">
                                 <div className="sightingTitle">{this.props.title}</div>
@@ -57,6 +58,14 @@ export default class Sighting extends React.Component {
                         onClick={this.handleDelete}
                     >
                         Delete
+                    </button>
+                    <button
+                        className='editButton'
+                        type='button'
+                        aria-label='edit button'
+                        onClick={this.editSighting}
+                    >
+                        Edit
                     </button>
                 </div>
             </div>

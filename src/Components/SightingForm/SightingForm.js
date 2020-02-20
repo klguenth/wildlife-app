@@ -1,13 +1,18 @@
 import React from 'react';
 import SubmitButton from '../SubmitButton/SubmitButton.js';
 import config from '../../config.js';
+import ApiContext from '../../ApiContext.js';
 import './SightingForm.css';
 
 export default class SightingForm extends React.Component {
 
+    static defaultProps = {
+        addSighting: () => {},
+    }
+    static contextType = ApiContext;
+
     handleAddSighting = event => {
         event.preventDefault()
-        console.log(event.target);
         const newSighting = {};
         newSighting.title = event.target.title.value;
         newSighting.sighting_date = event.target.sighting_date.value;
@@ -29,9 +34,6 @@ export default class SightingForm extends React.Component {
             return res.json()
         })
         .then((res) => {
-            this.context.addSighting(res, () => {
-                return res
-            })
             this.props.history.push(`/sightings`)
         })
         .catch(error => {
@@ -57,11 +59,11 @@ export default class SightingForm extends React.Component {
                         </div>
                         <div className="form-section">
                             <label htmlFor="behavior-short">Behavior: </label>
-                            <input type="text" id="brief_description" placeholder="feeding" required />
+                            <input type="text" id="brief_description" placeholder="Feeding" required />
                         </div>
                         <div className="form-section">
                             <label htmlFor="sighting-location">Location: </label>
-                            <input type="text" id="sighting_location" placeholder="location" required />
+                            <input type="text" id="sighting_location" placeholder="Location" required />
                         </div>
                         <div className="form-section">
                             <label htmlFor="sighting-date">Date: </label>

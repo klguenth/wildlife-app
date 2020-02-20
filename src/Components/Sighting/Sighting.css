@@ -24,7 +24,7 @@ input[type='checkbox'] {
     background-color:#58703A;
 }
 
-.lbl-toggle::before {
+/*.lbl-toggle::before {
     content: ' ';
     display: inline-block;
     border-top: 5px solid transparent;
@@ -52,13 +52,42 @@ input[type='checkbox'] {
 .toggle:checked + .lbl-toggle {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-}
+}*/
 
 /*container div*/
 .sighting {
+    list-style-type: none;
     text-align: center;
     border: 1px solid #000000;
     border-radius: 5px;
     padding: 20px;
     max-width: 800px;
+}
+
+/*delete button*/
+.deleteButton {
+    text-align: center;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 2px;
+}
+
+.deleteButton:hover {
+    color:#ffffff;
+    background-color:#58703A;
+}
+
+/*edit button*/
+.editButton {
+    text-align: center;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 2px;
+}
+
+.editButton:hover {
+    color:#ffffff;
+    background-color:#58703A;
 }
