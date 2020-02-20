@@ -8,6 +8,9 @@ export default class SightingEdit extends React.Component {
 
     static defaultProps = {
         editSighting: () => {},
+        match: {
+            params: {}
+        }
     }
     static contextType = ApiContext;
 

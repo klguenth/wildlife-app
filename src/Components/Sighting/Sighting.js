@@ -1,6 +1,8 @@
 import React from 'react';
 import ApiContext from '../../ApiContext.js';
 import config from '../../config.js';
+import SightingEdit from '../SightingEditForm/SightingEdit.js';
+import { Link } from 'react-router-dom';
 import './Sighting.css';
 
 export default class Sighting extends React.Component {
@@ -14,7 +16,6 @@ export default class Sighting extends React.Component {
     handleDelete = e => {
         e.preventDefault()
         const sightingId = this.props.sighting_id
-        console.log(sightingId);
         fetch(`${config.REACT_APP_API_ENDPOINT}/api/sightings/${sightingId}`, {
             method: 'DELETE',
             headers: {
@@ -59,14 +60,7 @@ export default class Sighting extends React.Component {
                     >
                         Delete
                     </button>
-                    <button
-                        className='editButton'
-                        type='button'
-                        aria-label='edit button'
-                        onClick={this.editSighting}
-                    >
-                        Edit
-                    </button>
+                    <Link to='/edit' component={SightingEdit}>Edit</Link>
                 </div>
             </div>
         );

@@ -14,11 +14,9 @@ export default class SightingList extends React.Component {
 
     render() {
         const { sightingId } = this.props.match.params
-        console.log(sightingId);
         const sightings = sightingId
             ? findSighting(this.props.sightings, sightingId)
             : this.props.sightings;
-        console.log(sightings);
         return (
             <>
                 <header>
