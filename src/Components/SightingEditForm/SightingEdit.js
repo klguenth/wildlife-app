@@ -4,6 +4,7 @@ import config from '../../config.js';
 import ApiContext from '../../ApiContext.js';
 import '../SightingForm/SightingForm.css';
 
+
 export default class SightingEdit extends React.Component {
 
     static defaultProps = {
@@ -16,7 +17,7 @@ export default class SightingEdit extends React.Component {
 
     handleEditSighting = event => {
         event.preventDefault()
-        const sightingId = this.props.sighting_id
+        const sightingId = this.props.sighting.sighting_id
         const modifiedSighting = {};
         modifiedSighting.title = event.target.title.value;
         modifiedSighting.sighting_date = event.target.sighting_date.value;
@@ -44,7 +45,7 @@ export default class SightingEdit extends React.Component {
     }
 
     render() {
-        const { sightingId } = this.props.match.params
+        console.log(this.context.sightings);
         return (
             <div id='sightingForm'>
                 <header>
@@ -54,27 +55,27 @@ export default class SightingEdit extends React.Component {
                     <form id="record-sighting" onSubmit={this.handleEditSighting}>
                         <div className="form-section">
                             <label htmlFor="sighting-title">Title: </label>
-                            <input type="text" id="title" value={this.context.sightings[sightingId].title} required />
+                            <input type="text" id="title" value={this.context.sightings.title} required />
                         </div>
                         <div className="form-section">
                             <label htmlFor="species-name">Species: </label>
-                            <input type="text" id="species" value={this.context.sightings[sightingId].species} required />
+                            <input type="text" id="species" value={this.context.species} required />
                         </div>
                         <div className="form-section">
                             <label htmlFor="behavior-short">Behavior: </label>
-                            <input type="text" id="brief_description" value={this.context.sightings[sightingId].brief_description} required />
+                            <input type="text" id="brief_description" value={this.context.brief_description} required />
                         </div>
                         <div className="form-section">
                             <label htmlFor="sighting-location">Location: </label>
-                            <input type="text" id="sighting_location" value={this.context.sightings[sightingId].sighting_location} required />
+                            <input type="text" id="sighting_location" value={this.context.sighting_location} required />
                         </div>
                         <div className="form-section">
                             <label htmlFor="sighting-date">Date: </label>
-                            <input type="date" id="sighting_date" min="2000-01-01" max="2019-12-1" value={this.context.sightings[sightingId].sighting_date} required="" />
+                            <input type="date" id="sighting_date" min="2000-01-01" max="2019-12-1" value={this.context.sighting_date} required="" />
                         </div>
                         <div className="form-section">
                             <label htmlFor="behavior-record">Details: </label>
-                            <textarea id="detailed_description" rows="15" value={this.context.sightings[sightingId].detailed_description} required />
+                            <textarea id="detailed_description" rows="15" value={this.context.sightings.detailed_description} required />
                         </div>
                         <SubmitButton />
                     </form>

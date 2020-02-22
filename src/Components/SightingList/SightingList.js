@@ -27,15 +27,7 @@ export default class SightingList extends React.Component {
                     <ul>
                         {sightings.map(sighting =>
                             <li key={sighting.sighting_id}>
-                                <Sighting
-                                    sighting_id={sighting.sighting_id}
-                                    title={sighting.title}
-                                    species={sighting.species}
-                                    brief_description={sighting.brief_description}
-                                    detailed_description={sighting.detailed_description}
-                                    sighting_date={sighting.sighting_date}
-                                    sighting_location={sighting.sighting_location}
-                                    />
+                                <Sighting sighting={sighting} />
                             </li>
                         )}
                     </ul>
