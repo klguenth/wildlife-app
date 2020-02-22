@@ -15,7 +15,7 @@ export default class SightingEdit extends React.Component {
     }
     static contextType = ApiContext;
 
-    handleEditSighting = event => {
+    /*handleEditSighting = event => {
         event.preventDefault()
         const sightingId = this.props.sighting.sighting_id
         const modifiedSighting = {};
@@ -42,7 +42,7 @@ export default class SightingEdit extends React.Component {
         .catch(error => {
             console.error({ error })
         })
-    }
+    }*/
 
     render() {
         console.log(this.context.sightings);

@@ -57,11 +57,20 @@ export default class App extends React.Component {
   }
 
   render() {
+    const handleEditSighting = () => {
+      console.log('handleEditSighting run');
+    }
+  
+    const handleDeleteSighting = () => {
+      console.log('handleDeleteSighting run');
+    }
+
     const value = {
       sightings: this.state.sightings,
       deleteSighting: this.handleDeleteSighting,
       editSighting: this.handleEditSighting,
     };
+
     return (
       <ApiContext.Provider value={value}>
         <div className="nav">

@@ -12,21 +12,31 @@ export default class Sighting extends React.Component {
 
     static contextType = ApiContext;
 
-    handleEdit = e => {
+    handleEditSighting = e => {
         e.preventDefault()
-        const sightingId = this.props.sighting_id
-        fetch(`${config.REACT_APP_API_ENDPOING}/api/sightings/${sightingId}`, {
+        const sightingId = this.props.sighting.sighting_id
+        const sighting = this.props.sighting;
+        /*sighting.title = this.props.title.value;
+        sighting.sighting_date = this.props.sighting_date.value;
+        sighting.species = this.props.species.value;
+        sighting.sighting_location = this.props.sighting_location.value;
+        sighting.brief_description = this.props.brief_description.value;
+        sighting.detailed_description = this.props.detailed_description.value;*/
+        fetch(`${config.REACT_APP_API_ENDPOINT}/api/sightings/${sightingId}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
             },
+            body: JSON.stringify(sighting),
         })
         .then(res => {
+            console.log(res);
             if (!res.ok)
                 return res.json().then(e => Promise.reject(e))
             return res;
         })
         .then(() => {
+            console.log(this.context);
             this.context.editSighting(sightingId)
             this.props.onEditSighting(sightingId)
         })
@@ -36,7 +46,7 @@ export default class Sighting extends React.Component {
     }
 
 
-    handleDelete = e => {
+    handleDeleteSighting = e => {
         e.preventDefault()
         const sightingId = this.props.sighting_id
         fetch(`${config.REACT_APP_API_ENDPOINT}/api/sightings/${sightingId}`, {
@@ -79,7 +89,7 @@ export default class Sighting extends React.Component {
                         className='deleteButton'
                         type='button'
                         aria-label='delete button'
-                        onClick={this.handleDelete}
+                        onClick={this.handleDeleteSighting}
                     >
                         Delete
                     </button>
@@ -87,7 +97,7 @@ export default class Sighting extends React.Component {
                         className='editButton'
                         type='button'
                         aria-label='edit button'
-                        onClick={this.handleEdit}
+                        onClick={this.handleEditSighting}
                         component={Link} to="/edit"
                     >
                         Edit
