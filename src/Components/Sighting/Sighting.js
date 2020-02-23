@@ -3,7 +3,7 @@ import ApiContext from '../../ApiContext.js';
 import config from '../../config.js';
 import SightingEdit from '../SightingEditForm/SightingEdit.js';
 import './Sighting.css';
-import { useHistory } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 
 
@@ -14,13 +14,6 @@ export default class Sighting extends React.Component {
     }
 
     static contextType = ApiContext;
-
-
-    /*let history = useHistory();
-    
-    function handleEditClick() {
-        history.push("/edit");
-    }*/
 
     handleEditSighting = e => {
         e.preventDefault()
@@ -74,6 +67,8 @@ export default class Sighting extends React.Component {
     }
 
     render() {
+        const sighting = this.props.match;
+        const sightingId = this.props.sighting.sighting_id;
         return (
             <div>
                 <div className="wrap-collapsible">
@@ -97,14 +92,7 @@ export default class Sighting extends React.Component {
                     >
                         Delete
                     </button>
-                    <button
-                        className='editButton'
-                        type='button'
-                        aria-label='edit button'
-                        onClick={/*this.handleEditClick()*/this.handleEditSighting}
-                    >
-                        Edit
-                    </button>
+                    <Link to={`/sightingEdit/${sightingId}`} className='editButton' aria-label='edit button'>Edit</Link>
                 </div>
             </div>
         );

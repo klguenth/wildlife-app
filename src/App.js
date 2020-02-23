@@ -50,7 +50,7 @@ export default class App extends React.Component {
         <Route path='/sightingForm' component={SightingForm} />
         <Route path="/sightingList" render={() => <SightingList sightings={this.state.sightings} />} />
         <Route path='/signupForm' component={SignUpForm} />
-        <Route path='/sightingEdit' component={SightingEdit} />
+        <Route path='/sightingEdit' render={(props) => <SightingEdit {...props} />} />
         <Route exact path='/' component={LandingPage} />
       </>
     );

@@ -81,9 +81,10 @@ input[type='checkbox'] {
 /*edit button*/
 .editButton {
     text-align: center;
+    text-decoration: none;
     border: 1px solid #000000;
     border-radius: 5px;
-    padding: 5px;
+    padding: 1px 5px;
     margin: 2px;
 }
 
