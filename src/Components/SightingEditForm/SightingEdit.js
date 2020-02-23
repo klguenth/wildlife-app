@@ -1,6 +1,6 @@
 import React from 'react';
 import SubmitButton from '../SubmitButton/SubmitButton.js';
-import config from '../../config.js';
+//import config from '../../config.js';
 import ApiContext from '../../ApiContext.js';
 import '../SightingForm/SightingForm.css';
 

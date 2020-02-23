@@ -1,8 +1,11 @@
 import React from 'react';
 import ApiContext from '../../ApiContext.js';
 import config from '../../config.js';
-import { Link } from 'react-router-dom';
+import SightingEdit from '../SightingEditForm/SightingEdit.js';
 import './Sighting.css';
+import { useHistory } from "react-router-dom";
+
+
 
 export default class Sighting extends React.Component {
     static defaultProps = {
@@ -12,16 +15,18 @@ export default class Sighting extends React.Component {
 
     static contextType = ApiContext;
 
+
+    /*let history = useHistory();
+    
+    function handleEditClick() {
+        history.push("/edit");
+    }*/
+
     handleEditSighting = e => {
         e.preventDefault()
         const sightingId = this.props.sighting.sighting_id
         const sighting = this.props.sighting;
-        /*sighting.title = this.props.title.value;
-        sighting.sighting_date = this.props.sighting_date.value;
-        sighting.species = this.props.species.value;
-        sighting.sighting_location = this.props.sighting_location.value;
-        sighting.brief_description = this.props.brief_description.value;
-        sighting.detailed_description = this.props.detailed_description.value;*/
+        console.log(sighting);
         fetch(`${config.REACT_APP_API_ENDPOINT}/api/sightings/${sightingId}`, {
             method: 'PATCH',
             headers: {
@@ -30,7 +35,6 @@ export default class Sighting extends React.Component {
             body: JSON.stringify(sighting),
         })
         .then(res => {
-            console.log(res);
             if (!res.ok)
                 return res.json().then(e => Promise.reject(e))
             return res;
@@ -97,8 +101,7 @@ export default class Sighting extends React.Component {
                         className='editButton'
                         type='button'
                         aria-label='edit button'
-                        onClick={this.handleEditSighting}
-                        component={Link} to="/edit"
+                        onClick={/*this.handleEditClick()*/this.handleEditSighting}
                     >
                         Edit
                     </button>

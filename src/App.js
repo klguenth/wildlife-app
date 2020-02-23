@@ -67,8 +67,8 @@ export default class App extends React.Component {
 
     const value = {
       sightings: this.state.sightings,
-      deleteSighting: this.handleDeleteSighting,
-      editSighting: this.handleEditSighting,
+      deleteSighting: handleDeleteSighting,
+      editSighting: handleEditSighting,
     };
 
     return (
