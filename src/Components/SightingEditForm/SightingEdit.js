@@ -48,7 +48,7 @@ export default class SightingEdit extends React.Component {
             this.props.onEditSighting(sightingId)
         })
         .then(() => {
-            this.props.history.push(`/sightings`)
+            this.props.history.push(`/sightingList`)
         })
         .catch(error => {
             console.error({ error })
@@ -57,7 +57,7 @@ export default class SightingEdit extends React.Component {
     findById(id) {
         for (let i = 0; i<this.context.sightings.length; i++) {
             console.log(this.context);
-            if (id === this.context.sightings[i].sighting_id) {
+            if (parseInt(id) === this.context.sightings[i].sighting_id) {
                 return i;
             }
         }
