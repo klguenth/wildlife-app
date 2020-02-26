@@ -24,6 +24,7 @@ export default class App extends React.Component {
   componentDidMount() {
       fetch(`${config.REACT_APP_API_ENDPOINT}/api/sightings/`)
         .then(res => {
+          console.log('Got response');
           if(!res.ok) {
             throw new Error('Something went wrong.');
           }
@@ -31,12 +32,15 @@ export default class App extends React.Component {
         })
         .then(res => res.json())
         .then(data => {
+          console.log('Got results');
+          console.log(data);
           this.setState({
             sightings: data,
             error: null
           });
         })
         .catch(err => {
+          console.log('Got error');
           this.setState({
             error: err.message
           });
@@ -50,7 +54,7 @@ export default class App extends React.Component {
         <Route path='/sightingForm' component={SightingForm} />
         <Route path="/sightingList" render={() => <SightingList sightings={this.state.sightings} />} />
         <Route path='/signupForm' component={SignUpForm} />
-        <Route path='/sightingEdit' render={(props) => <SightingEdit {...props} />} />
+        <Route path='/sightingEdit/:sighting_id' render={(props) => <SightingEdit {...props} />} />
         <Route exact path='/' component={LandingPage} />
       </>
     );

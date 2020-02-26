@@ -14,7 +14,7 @@ export default class SightingEdit extends React.Component {
         }
     }
     static contextType = ApiContext;
-    componentWillMount() {
+    componentDidMount() {
         console.log('context test', this.context);
     }
 
@@ -64,9 +64,10 @@ export default class SightingEdit extends React.Component {
     }
 
     render() {
-        let id = this.props.location.pathname.slice(14);
+        let id = this.props.match.params.sighting_id;
+        //location.pathname.slice(14);
         let index = this.findById(id)
-        console.log(index);
+        console.log(this.context.sightings);
         return (
             <ApiContext.Consumer>
                 <div id='sightingForm'>
