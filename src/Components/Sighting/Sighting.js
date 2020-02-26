@@ -1,7 +1,6 @@
 import React from 'react';
 import ApiContext from '../../ApiContext.js';
 import config from '../../config.js';
-import SightingEdit from '../SightingEditForm/SightingEdit.js';
 import './Sighting.css';
 import { Link } from 'react-router-dom';
 
@@ -14,34 +13,6 @@ export default class Sighting extends React.Component {
     }
 
     static contextType = ApiContext;
-
-    handleEditSighting = e => {
-        e.preventDefault()
-        const sightingId = this.props.sighting.sighting_id
-        const sighting = this.props.sighting;
-        console.log(sighting);
-        fetch(`${config.REACT_APP_API_ENDPOINT}/api/sightings/${sightingId}`, {
-            method: 'PATCH',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(sighting),
-        })
-        .then(res => {
-            if (!res.ok)
-                return res.json().then(e => Promise.reject(e))
-            return res;
-        })
-        .then(() => {
-            console.log(this.context);
-            this.context.editSighting(sightingId)
-            this.props.onEditSighting(sightingId)
-        })
-        .catch(error => {
-            console.error({ error })
-        })
-    }
-
 
     handleDeleteSighting = e => {
         e.preventDefault()
@@ -67,7 +38,7 @@ export default class Sighting extends React.Component {
     }
 
     render() {
-        const sighting = this.props.match;
+        //const sighting = this.props.match;
         const sightingId = this.props.sighting.sighting_id;
         return (
             <div>
