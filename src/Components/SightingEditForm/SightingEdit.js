@@ -14,6 +14,7 @@ export default class SightingEdit extends React.Component {
         }
     }
     static contextType = ApiContext;
+    
     componentDidMount() {
         console.log('context test', this.context);
     }
@@ -70,7 +71,8 @@ export default class SightingEdit extends React.Component {
         console.log(this.context.sightings);
         return (
             <ApiContext.Consumer>
-                <div id='sightingForm'>
+                {defaultValue => (
+                    <div id='sightingForm'>
                     <header>
                     Edit Sighting
                     </header>
@@ -78,32 +80,35 @@ export default class SightingEdit extends React.Component {
                         <form id="record-sighting" onSubmit={this.handleEditSighting}>
                             <div className="form-section">
                                 <label htmlFor="sighting-title">Title: </label>
-                                <input type="text" id="title" value={this.context.sightings[index].title} required />
+                                <input type="text" id="title" defaultValue={this.context.sightings[index].title} required />
                             </div>
                             <div className="form-section">
                                 <label htmlFor="species-name">Species: </label>
-                                <input type="text" id="species" value={this.context.sightings[index].species} required />
+                                <input type="text" id="species" defaultValue={this.context.sightings[index].species} required />
                             </div>
                             <div className="form-section">
                                 <label htmlFor="behavior-short">Behavior: </label>
-                                <input type="text" id="brief_description" value={this.context.sightings[index].brief_description} required />
+                                <input type="text" id="brief_description" defaultValue={this.context.sightings[index].brief_description} required />
                             </div>
                             <div className="form-section">
                                 <label htmlFor="sighting-location">Location: </label>
-                                <input type="text" id="sighting_location" value={this.context.sightings[index].sighting_location} required />
+                                <input type="text" id="sighting_location" defaultValue={this.context.sightings[index].sighting_location} required />
                             </div>
                             <div className="form-section">
                                 <label htmlFor="sighting-date">Date: </label>
-                                <input type="date" id="sighting_date" min="2000-01-01" max="2019-12-1" value={this.context.sightings[index].sighting_date} required="" />
+                                <input type="date" id="sighting_date" min="2000-01-01" max="2019-12-1" defaultValue={this.context.sightings[index].sighting_date.substring(0, 10)} required="" />
                             </div>
                             <div className="form-section">
                                 <label htmlFor="behavior-record">Details: </label>
-                                <textarea id="detailed_description" rows="15" value={this.context.sightings[index].detailed_description} required />
+                                <textarea id="detailed_description" rows="15" defaultValue={this.context.sightings[index].detailed_description} required />
                             </div>
                             <SubmitButton />
                         </form>
                     </div>
                 </div>
+
+                )}
+
             </ApiContext.Consumer>
         );
     }
