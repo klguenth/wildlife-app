@@ -38,7 +38,6 @@ export default class Sighting extends React.Component {
     }
 
     render() {
-        //const sighting = this.props.match;
         const sightingId = this.props.sighting.sighting_id;
         return (
             <div>

@@ -14,23 +14,20 @@ export default class SightingEdit extends React.Component {
         }
     }
     static contextType = ApiContext;
-    
-    componentDidMount() {
-        console.log('context test', this.context);
-    }
 
     handleEditSighting = event => {
         event.preventDefault()
-        let index = this.props.location.pathname.slice(14);
+        const id = this.props.location.pathname.slice(14);
+        const index = this.findById(id);
         const sightingId = this.context.sightings[index].sighting_id;
         const modifiedSighting = {};
-        modifiedSighting.title = event.target.title;
-        modifiedSighting.sighting_date = event.target.sighting.sighting_date;
-        modifiedSighting.species = event.target.sighting.species;
-        modifiedSighting.sighting_location = event.target.sighting.sighting_location;
-        modifiedSighting.brief_description = event.target.sighting.brief_description;
-        modifiedSighting.detailed_description = event.target.sighting.detailed_description;
-        console.log(modifiedSighting);
+        modifiedSighting.title = event.target.title.value;
+        modifiedSighting.sighting_date = event.target.sighting_date.value;
+        modifiedSighting.species = event.target.species.value;
+        modifiedSighting.sighting_location = event.target.sighting_location.value;
+        modifiedSighting.brief_description = event.target.brief_description.value;
+        modifiedSighting.detailed_description = event.target.detailed_description.value;
+console.log(modifiedSighting);
         fetch(`${config.REACT_APP_API_ENDPOINT}/api/sightings/${sightingId}`, {
             method: 'PATCH',
             headers: {
@@ -43,12 +40,12 @@ export default class SightingEdit extends React.Component {
                 return res.json().then(e => Promise.reject(e))
             return res;
         })
-        .then(() => {
-            console.log(this.context);
+        /*.then(() => {
             this.context.editSighting(sightingId)
             this.props.onEditSighting(sightingId)
-        })
+        })*/
         .then(() => {
+            console.log('redirect');
             this.props.history.push(`/sightingList`)
         })
         .catch(error => {
@@ -57,7 +54,6 @@ export default class SightingEdit extends React.Component {
     }
     findById(id) {
         for (let i = 0; i<this.context.sightings.length; i++) {
-            console.log(this.context);
             if (parseInt(id) === this.context.sightings[i].sighting_id) {
                 return i;
             }
@@ -66,9 +62,7 @@ export default class SightingEdit extends React.Component {
 
     render() {
         let id = this.props.match.params.sighting_id;
-        //location.pathname.slice(14);
         let index = this.findById(id)
-        console.log(this.context.sightings);
         return (
             <ApiContext.Consumer>
                 {defaultValue => (
@@ -96,7 +90,7 @@ export default class SightingEdit extends React.Component {
                             </div>
                             <div className="form-section">
                                 <label htmlFor="sighting-date">Date: </label>
-                                <input type="date" id="sighting_date" min="2000-01-01" max="2019-12-1" defaultValue={this.context.sightings[index].sighting_date.substring(0, 10)} required="" />
+                                <input type="date" id="sighting_date" min="2000-01-01" max="2020-12-31" defaultValue={this.context.sightings[index].sighting_date.substring(0, 10)} required="" />
                             </div>
                             <div className="form-section">
                                 <label htmlFor="behavior-record">Details: </label>

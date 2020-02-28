@@ -24,7 +24,6 @@ export default class App extends React.Component {
   componentDidMount() {
       fetch(`${config.REACT_APP_API_ENDPOINT}/api/sightings/`)
         .then(res => {
-          console.log('Got response');
           if(!res.ok) {
             throw new Error('Something went wrong.');
           }
@@ -32,7 +31,6 @@ export default class App extends React.Component {
         })
         .then(res => res.json())
         .then(data => {
-          console.log('Got results');
           console.log(data);
           this.setState({
             sightings: data,
@@ -40,7 +38,6 @@ export default class App extends React.Component {
           });
         })
         .catch(err => {
-          console.log('Got error');
           this.setState({
             error: err.message
           });
