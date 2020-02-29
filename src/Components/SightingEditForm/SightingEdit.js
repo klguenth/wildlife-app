@@ -7,11 +7,16 @@ import '../SightingForm/SightingForm.css';
 
 export default class SightingEdit extends React.Component {
 
+    // constructor(props) {
+    //     super(props)
+    //     this.onEditSighting = this.onEditSighting.bind(this);
+    // }
+
     static defaultProps = {
         editSighting: () => {},
         match: {
             params: {}
-        }
+        },
     }
     static contextType = ApiContext;
 
@@ -40,10 +45,10 @@ console.log(modifiedSighting);
                 return res.json().then(e => Promise.reject(e))
             return res;
         })
-        /*.then(() => {
+        .then(() => {
             this.context.editSighting(sightingId)
             this.props.onEditSighting(sightingId)
-        })*/
+        })
         .then(() => {
             console.log('redirect');
             this.props.history.push(`/sightingList`)
@@ -52,6 +57,7 @@ console.log(modifiedSighting);
             console.error({ error })
         })
     }
+    
     findById(id) {
         for (let i = 0; i<this.context.sightings.length; i++) {
             if (parseInt(id) === this.context.sightings[i].sighting_id) {
