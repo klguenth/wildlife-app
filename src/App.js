@@ -58,8 +58,16 @@ export default class App extends React.Component {
   }
 
   render() {
-    const handleEditSighting = () => {
+
+    const handleEditSighting = (sightings, modifiedSighting) => {
       console.log('handleEditSighting run');
+      console.log(sightings);
+      console.log(modifiedSighting);
+      const newSightingsList = (sightings.push({modifiedSighting}));
+      this.setState({
+        sightings: newSightingsList
+      })
+        return (sightings);
     }
   
     const handleDeleteSighting = () => {

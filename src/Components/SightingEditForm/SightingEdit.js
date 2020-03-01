@@ -7,11 +7,6 @@ import '../SightingForm/SightingForm.css';
 
 export default class SightingEdit extends React.Component {
 
-    // constructor(props) {
-    //     super(props)
-    //     this.onEditSighting = this.onEditSighting.bind(this);
-    // }
-
     static defaultProps = {
         editSighting: () => {},
         match: {
@@ -47,7 +42,7 @@ console.log(modifiedSighting);
         })
         .then(() => {
             this.context.editSighting(sightingId)
-            this.props.onEditSighting(sightingId)
+            //this.props.onEditSighting(sightingId)
         })
         .then(() => {
             console.log('redirect');
@@ -77,7 +72,7 @@ console.log(modifiedSighting);
                     Edit Sighting
                     </header>
                     <div id='sightingFormBody'>
-                        <form id="record-sighting" onSubmit={this.handleEditSighting}>
+                        <form id="record-sighting" onSubmit={this.handleEditSighting} action=''>
                             <div className="form-section">
                                 <label htmlFor="sighting-title">Title: </label>
                                 <input type="text" id="title" defaultValue={this.context.sightings[index].title} required />
