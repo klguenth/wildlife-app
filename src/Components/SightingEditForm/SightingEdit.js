@@ -42,6 +42,7 @@ console.log(modifiedSighting);
             console.log(this.context);
             this.context.editSighting(sightingId)
             this.props.history.push(`/sightingList`)
+            window.location.reload();
             })
         }
     //     fetch(`${config.REACT_APP_API_ENDPOINT}/api/sightings/${sightingId}`, {

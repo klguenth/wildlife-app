@@ -57,18 +57,6 @@ export default class App extends React.Component {
     );
   }
 
-  // handleEditSighting = (sightings, modifiedSighting) => {
-  //   console.log('handleEditSighting run');
-  //   console.log(sightings);
-  //   console.log(modifiedSighting);
-  //   const newSightingsList = (sightings.push({modifiedSighting}));
-  //   this.setState({
-  //     sightings: newSightingsList
-  //   }) 
-  //   console.log(newSightingsList);
-  //     return (sightings);
-  // }
-
   handleEditSighting = () => {
     console.log('handleEditSighting run');
   }
