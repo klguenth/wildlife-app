@@ -34,24 +34,41 @@ console.log(modifiedSighting);
                 'content-type': 'application/json'
             },
             body: JSON.stringify(modifiedSighting),
-        })
-        .then(res => {
-            if (!res.ok)
-                return res.json().then(e => Promise.reject(e))
-            return res;
-        })
-        .then(() => {
+        }).then(res => {
+            if (!res.ok) {
+                console.log('error')
+            return;
+            }
+            console.log(this.context);
             this.context.editSighting(sightingId)
-            //this.props.onEditSighting(sightingId)
-        })
-        .then(() => {
-            console.log('redirect');
             this.props.history.push(`/sightingList`)
-        })
-        .catch(error => {
-            console.error({ error })
-        })
-    }
+            })
+        }
+    //     fetch(`${config.REACT_APP_API_ENDPOINT}/api/sightings/${sightingId}`, {
+    //         method: 'PATCH',
+    //         headers: {
+    //             'content-type': 'application/json'
+    //         },
+    //         body: JSON.stringify(modifiedSighting),
+    //     })
+    //     .then(res => {
+    //         if (!res.ok)
+    //             return res.json().then(e => Promise.reject(e))
+    //         return res;
+    //     })
+    //     .then(() => {
+    //         this.context.editSighting(sightingId)
+    //         console.log(this.context.editSighting)
+    //         //this.props.onEditSighting(sightingId)
+    //     })
+    //     .then(() => {
+    //         console.log('redirect');
+    //         this.props.history.push(`/sightingList`)
+    //     })
+    //     .catch(error => {
+    //         console.error({ error })
+    //     })
+    // }
     
     findById(id) {
         for (let i = 0; i<this.context.sightings.length; i++) {
@@ -101,9 +118,7 @@ console.log(modifiedSighting);
                         </form>
                     </div>
                 </div>
-
                 )}
-
             </ApiContext.Consumer>
         );
     }

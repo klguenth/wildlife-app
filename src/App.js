@@ -57,16 +57,20 @@ export default class App extends React.Component {
     );
   }
 
-  handleEditSighting = (sightings, modifiedSighting) => {
+  // handleEditSighting = (sightings, modifiedSighting) => {
+  //   console.log('handleEditSighting run');
+  //   console.log(sightings);
+  //   console.log(modifiedSighting);
+  //   const newSightingsList = (sightings.push({modifiedSighting}));
+  //   this.setState({
+  //     sightings: newSightingsList
+  //   }) 
+  //   console.log(newSightingsList);
+  //     return (sightings);
+  // }
+
+  handleEditSighting = () => {
     console.log('handleEditSighting run');
-    console.log(sightings);
-    console.log(modifiedSighting);
-    const newSightingsList = (sightings.push({modifiedSighting}));
-    this.setState({
-      sightings: newSightingsList
-    }) 
-    console.log(newSightingsList);
-      return (sightings);
   }
 
   handleDeleteSighting = () => {
@@ -77,8 +81,8 @@ export default class App extends React.Component {
 
     const value = {
       sightings: this.state.sightings,
-      deleteSighting: handleDeleteSighting,
-      editSighting: handleEditSighting,
+      deleteSighting: this.handleDeleteSighting,
+      editSighting: this.handleEditSighting,
     };
 
     return (
