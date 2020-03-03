@@ -39,7 +39,6 @@ console.log(modifiedSighting);
                 console.log('error')
             return;
             }
-            console.log(this.context);
             this.context.editSighting(sightingId)
             this.props.history.push(`/sightingList`)
             window.location.reload();

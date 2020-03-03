@@ -34,7 +34,8 @@ export default class SightingForm extends React.Component {
             return res.json()
         })
         .then((res) => {
-            this.props.history.push(`/sightings`)
+            this.props.history.push(`/sightingList`)
+            window.location.reload()
         })
         .catch(error => {
             console.error({ error })

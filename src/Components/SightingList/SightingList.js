@@ -1,7 +1,6 @@
 import React from 'react';
 import ApiContext from '../../ApiContext';
 import Sighting from '../Sighting/Sighting.js';
-import SortOptions from '../SortOptions/SortOptions.js';
 import { findSighting } from '../../sightings-helpers';
 
 export default class SightingList extends React.Component {
@@ -22,7 +21,6 @@ export default class SightingList extends React.Component {
                 <header>
                 Sighting List
                 </header>
-                <SortOptions />
                 <section className="sightingList">
                     <ul>
                         {sightings.map(sighting =>

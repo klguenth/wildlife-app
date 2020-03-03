@@ -9,14 +9,16 @@ import { Link } from 'react-router-dom';
 export default class Sighting extends React.Component {
     static defaultProps = {
         onDeleteSighting: () => {},
-        onEditSighting: () => {}
+        onEditSighting: () => {},
+        match: {
+            params: {}
+        }
     }
-
     static contextType = ApiContext;
 
     handleDeleteSighting = e => {
         e.preventDefault()
-        const sightingId = this.props.sighting_id
+        const sightingId = this.props.sighting.sighting_id;
         fetch(`${config.REACT_APP_API_ENDPOINT}/api/sightings/${sightingId}`, {
             method: 'DELETE',
             headers: {
@@ -31,6 +33,7 @@ export default class Sighting extends React.Component {
         .then(() => {
             this.context.deleteSighting(sightingId)
             this.props.onDeleteSighting(sightingId)
+            window.location.reload();
         })
         .catch(error => {
             console.error({ error })
