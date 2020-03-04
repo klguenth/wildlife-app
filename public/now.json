@@ -8,5 +8,8 @@
             "dest": "/static/$1"
         },
         { "src": "/.*", "dest": "/index.html" }
-    ]
+    ],
+   "env": {
+      "REACT_APP_API_ENDPOINT": "https://hidden-dusk-74862.herokuapp.com/"
+   }
 }
