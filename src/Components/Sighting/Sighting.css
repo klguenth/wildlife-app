@@ -6,71 +6,72 @@ input[type='checkbox'] {
     display: none;
 }
 
-/*lable css*/
-.lbl-toggle {
-    display: block;
-    text-align: center;
-    padding: 10px;
-    width: 500px;
-    color: #000000;
-    border: 1px solid #000000;
-    margin: 5px;
-    cursor: pointer;
-    transition: all 0.25s ease-out;
-}
-
-.lbl-toggle:hover {
-    color:#ffffff;
-    background-color:#58703A;
-}
-
-/*.lbl-toggle::before {
-    content: ' ';
-    display: inline-block;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 5px solid currentColor;
-    vertical-align: middle;
-    transform: translateY(-2px);
-    transition: transform .2s ease-out;
-}
-
-.collapsible-content {
-    max-height: 0px;
-    overflow: hidden;
-    transition: max-height .25s ease-in-out;
-}
-
-.toggle:checked + .lbl-toggle + .collapsible-content {
-    max-height: 100vh;
-}
-
-.toggle:checked + .lbl-toggle::before {
-    transform: rotate(90deg) translateX(-3px);
-}
-
-.toggle:checked + .lbl-toggle {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-}*/
-
 /*container div*/
 .sighting {
-    list-style-type: none;
     text-align: center;
     border: 1px solid #000000;
     border-radius: 5px;
-    padding: 20px;
     max-width: 800px;
+}
+
+.wrapper {
+    display: block;
+    margin: 20px;
+    width: 600px;
+    padding-top: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sightingLabel {
+    display: block;
+    cursor: pointer;
+    width: auto;
+    padding: 20px;
+    margin: 5px auto;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    text-align: center;
+}
+
+label:hover {
+    background: #58703A;
+    color: #ffffff;
+}
+
+ul ul li {
+    padding: 10px;
+}
+
+input[type="checkbox"] ~ ul {
+    height: 0;
+    transform: scaleY(0);
+}
+
+input[type="checkbox"]:checked ~ ul {
+    height: 100%;
+    transform-origin: top;
+    transition: transform .2s ease-out;
+    transform: scaleY(1);
+}
+
+input[type="checkbox"]:checked + label {
+    background: #58703A;
+    color: #ffffff;
 }
 
 /*delete button*/
 .deleteButton {
+    font-size: 12px;
     text-align: center;
     border: 1px solid #000000;
     border-radius: 5px;
     padding: 5px;
-    margin: 2px;
+    margin: 3px;
 }
 
 .deleteButton:hover {
@@ -80,12 +81,14 @@ input[type='checkbox'] {
 
 /*edit button*/
 .editButton {
+    float: center;
+    font-size: 12px;
     text-align: center;
     text-decoration: none;
     border: 1px solid #000000;
     border-radius: 5px;
-    padding: 1px 5px;
-    margin: 2px;
+    padding: 5px;
+    margin: 3px;
 }
 
 .editButton:hover {

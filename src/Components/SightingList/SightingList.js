@@ -18,11 +18,11 @@ export default class SightingList extends React.Component {
             : this.props.sightings;
         return (
             <>
-                <header>
+                <header className="listHeader">
                 Sighting List
                 </header>
                 <section className="sightingList">
-                    <ul>
+                    <ul className="sightingList">
                         {sightings.map(sighting =>
                             <li key={sighting.sighting_id}>
                                 <Sighting sighting={sighting} />

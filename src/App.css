@@ -12,10 +12,6 @@ body {
     flex-direction: column;
     align-items: center;
 }
-  
-.mainSection {
-    /* width: 100%; */
-}
 
 .mainSection header {
     width: 100%;

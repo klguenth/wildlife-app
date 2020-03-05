@@ -17,7 +17,7 @@ export default class Nav extends React.Component {
                     <ul>
                     <img src={require("./print.png")} className="pawPrint" alt="pawprint"></img>
                         <li><Link to='/'>Home</Link></li>
-                        <li><Link to='/Login'>Login</Link></li>
+                        {/* <li><Link to='/Login'>Login</Link></li> */}
                         {buttons}
                     </ul>
             </nav>

@@ -43,30 +43,32 @@ export default class Sighting extends React.Component {
     render() {
         const sightingId = this.props.sighting.sighting_id;
         return (
-            <div>
-                <div className="wrap-collapsible">
-                    <input id="collapsible" type="checkbox" className="toggle" />
-                    <label htmlFor="collapsible" className="lbl-toggle">{this.props.sighting.title}</label>
-                        <div className="collapsible-content">
-                            <div className="sighting">
+            <div className="wrapper">
+                <ul>
+                    <li>
+                        <input id="collapsible" type="checkbox" className="toggle" />
+                        <label htmlFor="collapsible" className="sightingLabel">{this.props.sighting.title}</label>
+                        <ul className="sighting">
+                            <li>
                                 <div className="sightingTitle">{this.props.sighting.title}</div>
                                 <div className="sightingDate">{this.props.sighting.sighting_date}</div>
                                 <div className="sightingSpecies">{this.props.sighting.species}</div>
                                 <div className="sightingLocation">{this.props.sighting.sighting_location}</div>
                                 <div className="sightingBehavior">{this.props.sighting.brief_description}</div>
                                 <p className="sightingDetailedBehavior">{this.props.sighting.detailed_description}</p>
-                            </div>
-                        </div>
-                    <button 
-                        className='deleteButton'
-                        type='button'
-                        aria-label='delete button'
-                        onClick={this.handleDeleteSighting}
-                    >
-                        Delete
-                    </button>
-                    <Link to={`/sightingEdit/${sightingId}`} className='editButton' aria-label='edit button'>Edit</Link>
-                </div>
+                                <button 
+                                    className='deleteButton'
+                                    type='button'
+                                    aria-label='delete button'
+                                    onClick={this.handleDeleteSighting}
+                                >
+                                    Delete
+                                </button>
+                                <Link to={`/sightingEdit/${sightingId}`} className='editButton' aria-label='edit button'>Edit</Link>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         );
     }

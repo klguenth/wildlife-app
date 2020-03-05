@@ -28,7 +28,7 @@ export default class LandingPage extends React.Component {
                         <div className="wwSummary3">
                             <h3>Track Species</h3>
                             <h4>Record varieties of animal species, monitor animal behavior, and track sightings over time.</h4>
-                            <Link to='/SignUpForm'>Sign Up</Link>
+                            {/* <Link to='/SignUpForm'>Sign Up</Link> */}
                         </div>
                     </div>
                     <div className="imgContainer2">
