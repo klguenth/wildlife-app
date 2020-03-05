@@ -56,6 +56,7 @@ export default class Sighting extends React.Component {
                                 <div className="sightingLocation">{this.props.sighting.sighting_location}</div>
                                 <div className="sightingBehavior">{this.props.sighting.brief_description}</div>
                                 <p className="sightingDetailedBehavior">{this.props.sighting.detailed_description}</p>
+                                <Link to={`/sightingEdit/${sightingId}`} className='editButton' aria-label='edit button'>Edit</Link>
                                 <button 
                                     className='deleteButton'
                                     type='button'
@@ -64,7 +65,6 @@ export default class Sighting extends React.Component {
                                 >
                                     Delete
                                 </button>
-                                <Link to={`/sightingEdit/${sightingId}`} className='editButton' aria-label='edit button'>Edit</Link>
                             </li>
                         </ul>
                     </li>

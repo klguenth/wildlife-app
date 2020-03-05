@@ -29,7 +29,9 @@ ul {
 
 .sightingLabel {
     display: block;
-    cursor: pointer;
+    /* cursor: pointer; */
+    background-color: #58703A;
+    color: #ffffff;
     width: auto;
     padding: 20px;
     margin: 5px auto;
@@ -38,16 +40,16 @@ ul {
     text-align: center;
 }
 
-label:hover {
+/* label:hover {
     background: #58703A;
     color: #ffffff;
-}
+} */
 
 ul ul li {
     padding: 10px;
 }
 
-input[type="checkbox"] ~ ul {
+/* input[type="checkbox"] ~ ul {
     height: 0;
     transform: scaleY(0);
 }
@@ -57,7 +59,7 @@ input[type="checkbox"]:checked ~ ul {
     transform-origin: top;
     transition: transform .2s ease-out;
     transform: scaleY(1);
-}
+} */
 
 input[type="checkbox"]:checked + label {
     background: #58703A;

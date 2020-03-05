@@ -8,9 +8,9 @@
     background-color: #ffffff;
 }
 /*Hide Hamburger*/
-#hamburgerNav label, #hamburger, .pawPrint {
+/* #hamburgerNav label, #hamburger, .pawPrint {
     display: none;
-}
+} */
 
 /*Menu Items*/
 #hamburgerNav ul {
