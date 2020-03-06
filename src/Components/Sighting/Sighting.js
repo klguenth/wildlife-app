@@ -52,7 +52,7 @@ export default class Sighting extends React.Component {
                     <div className="sightingBehavior">{this.props.sighting.brief_description}</div>
                     <p className="sightingDetailedBehavior">{this.props.sighting.detailed_description}</p>
                     <Link to={`/sightingEdit/${sightingId}`} className="editButton" aria-label="edit button">Edit</Link>
-                    <button className="deleteButton" type="button" aria-label="delete button" onClick={this.handleDeleteSighting}>Delete</button>);
+                    <button className="deleteButton" type="button" aria-label="delete button" onClick={this.handleDeleteSighting}>Delete</button>
                 </li>
             )
         } else {
@@ -70,21 +70,6 @@ export default class Sighting extends React.Component {
                         <label htmlFor="collapsible" className="sightingLabel">{this.props.sighting.title}</label>
                         <ul className="sighting">
                             {sighting}
-                            {/* <div className="sightingTitle">{this.props.sighting.title}</div>
-                            <div className="sightingDate">{this.props.sighting.sighting_date}</div>
-                            <div className="sightingSpecies">{this.props.sighting.species}</div>
-                            <div className="sightingLocation">{this.props.sighting.sighting_location}</div>
-                            <div className="sightingBehavior">{this.props.sighting.brief_description}</div>
-                            <p className="sightingDetailedBehavior">{this.props.sighting.detailed_description}</p>
-                            <Link to={`/sightingEdit/${sightingId}`} className='editButton' aria-label='edit button'>Edit</Link>
-                            <button 
-                                className='deleteButton'
-                                type='button'
-                                aria-label='delete button'
-                                onClick={this.handleDeleteSighting}
-                            >
-                                Delete
-                            </button> */}
                         </ul>
                     </li>
                 </ul>
