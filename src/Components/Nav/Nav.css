@@ -10,6 +10,10 @@
 #hamburgerNav label {
     padding: 10px;
 }
+
+#hamburgerIcon {
+    display: none;
+}
 /*Hide Hamburger*/
 /* #hamburgerNav label, #hamburger, .whaleTail {
     display: none;
@@ -61,6 +65,9 @@
         border: none;
         border-radius: 3px;
         padding: 10px;
+    }
+    #hamburgerIcon {
+        display: block;
     }
     /*color change*/
     #hamburgerNav label:hover {

@@ -12,7 +12,7 @@ export default class Nav extends React.Component {
         }
         return (
             <nav id="hamburgerNav">
-                <label htmlFor="hamburger">&#9776;</label>
+                <label htmlFor="hamburger" id="hamburgerIcon">&#9776;</label>
                 <input type="checkbox" id="hamburger"/>
                     <ul>
                     <img src={require("./whale.png")} className="whaleTail" alt="whaletail"></img>
