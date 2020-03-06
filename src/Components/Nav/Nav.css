@@ -7,12 +7,16 @@
     z-index: 10;
     background-color: #ffffff;
 }
+#hamburgerNav label {
+    padding: 10px;
+}
 /*Hide Hamburger*/
 /* #hamburgerNav label, #hamburger, .whaleTail {
     display: none;
 } */
 
 /*Menu Items*/
+
 #hamburgerNav ul {
     list-style-type: none;
     margin: 10px;
@@ -67,8 +71,6 @@
         display: block;
         width: 150px;
         text-align: center;
-    }
-    #hamburgerNav ul li {
         border-top: 1px solid #ffffff;
     }
     /*toggle show/hide menu on checkbox click*/

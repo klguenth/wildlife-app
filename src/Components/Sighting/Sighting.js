@@ -41,7 +41,10 @@ export default class Sighting extends React.Component {
     }
 
     render() {
-        const sightingId = this.props.sighting.sighting_id;
+        const sightingId = this.props.sighting.sighting_id;        
+        if {this.props.clickedIndex === this.props.index} {
+            
+        }
         return (
             <div className="wrapper">
                 <ul>

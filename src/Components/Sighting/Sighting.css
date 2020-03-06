@@ -48,7 +48,7 @@ label:hover {
 ul ul li {
     padding: 10px;
 }
-
+/* 
 input[type="checkbox"] ~ ul {
     height: 0;
     transform: scaleY(0);
@@ -64,7 +64,7 @@ input[type="checkbox"]:checked ~ ul {
 input[type="checkbox"]:checked + label {
     background: #58703A;
     color: #ffffff;
-}
+} */
 
 /*delete button*/
 .deleteButton {
