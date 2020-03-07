@@ -67,7 +67,7 @@ export default class Sighting extends React.Component {
                 <ul>
                     <li>
                         <input id="collapsible" type="checkbox" className="toggle" />
-                        <label htmlFor="collapsible" className="sightingLabel">{this.props.sighting.title}</label>
+                        {/* <label htmlFor="collapsible" className="sightingLabel">{this.props.sighting.title}</label> */}
                         <ul className="sighting">
                             {sighting}
                         </ul>
