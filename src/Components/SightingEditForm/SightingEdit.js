@@ -4,7 +4,6 @@ import config from '../../config.js';
 import ApiContext from '../../ApiContext.js';
 import '../SightingForm/SightingForm.css';
 
-
 export default class SightingEdit extends React.Component {
 
     static defaultProps = {
@@ -17,6 +16,7 @@ export default class SightingEdit extends React.Component {
 
     handleEditSighting = event => {
         event.preventDefault()
+        const sightings = [];
         const id = this.props.location.pathname.slice(14);
         const index = this.findById(id);
         const sightingId = this.context.sightings[index].sighting_id;
@@ -39,8 +39,7 @@ export default class SightingEdit extends React.Component {
             return;
             }
             this.context.editSighting(sightingId)
-            this.props.history.go(`/sightingList`)
-            //this.props.history.push(`/sightingList`)
+            this.props.history.push(`/sightingList/${sightingId}`, [sightings]);
             })
         }
     
