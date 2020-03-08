@@ -39,8 +39,8 @@ export default class SightingEdit extends React.Component {
             return;
             }
             this.context.editSighting(sightingId)
-            this.props.history.push(`/sightingList`)
-            window.location.reload();
+            this.props.history.go(`/sightingList`)
+            //this.props.history.push(`/sightingList`)
             })
         }
     

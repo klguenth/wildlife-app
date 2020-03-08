@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Nav from '../Nav/Nav.js';
 import './LandingPage.css';
 
 export default class LandingPage extends React.Component {
