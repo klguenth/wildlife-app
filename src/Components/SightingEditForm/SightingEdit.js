@@ -55,7 +55,7 @@ export default class SightingEdit extends React.Component {
         if (this.props.sightings !== prevProps.sightings) {
             this.setState({ sightings: this.props.sightings });
         }
-        this.props.history.push(`/sightingList`);
+        //this.props.history.push(`/sightingList`);
     };
     
     findById(id) {
