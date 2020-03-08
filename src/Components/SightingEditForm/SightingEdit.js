@@ -6,6 +6,13 @@ import '../SightingForm/SightingForm.css';
 
 export default class SightingEdit extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            sightings: this.props.sightings
+        }
+    }
+
     static defaultProps = {
         editSighting: () => {},
         match: {
@@ -33,15 +40,23 @@ export default class SightingEdit extends React.Component {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(modifiedSighting),
-        }).then(res => {
+            })
+        .then(res => {
             if (!res.ok) {
                 console.log('error')
-            return;
+            return res.json();
             }
+        })
+        .then((res) => {
             this.context.editSighting(sightingId)
-            this.props.history.push(`/sightingList/${sightingId}`, [sightings]);
-            })
+        });
+    }
+    componentDidUpdate(prevProps) {
+        if (this.props.sightings !== prevProps.sightings) {
+            this.setState({ sightings: this.props.sightings });
         }
+        this.props.history.push(`/sightingList`);
+    };
     
     findById(id) {
         for (let i = 0; i<this.context.sightings.length; i++) {
