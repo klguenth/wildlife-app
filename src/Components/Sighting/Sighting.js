@@ -3,6 +3,7 @@ import ApiContext from '../../ApiContext.js';
 import config from '../../config.js';
 import './Sighting.css';
 import { Link } from 'react-router-dom';
+import { format, parseISO } from 'date-fns';
 
 
 
@@ -46,7 +47,8 @@ export default class Sighting extends React.Component {
         if (this.props.clickedIndex === this.props.index) {
             sighting = (
                 <li>
-                    <div className="sightingDate">{this.props.sighting.sighting_date}</div>
+                    <div className="sightingTitle">{this.props.sighting.title}</div>
+                    <div className="sightingDate">{format(parseISO(this.props.sighting.sighting_date), 'dd MMM yyyy')}</div>
                     <div className="sightingSpecies">{this.props.sighting.species}</div>
                     <div className="sightingLocation">{this.props.sighting.sighting_location}</div>
                     <div className="sightingBehavior">{this.props.sighting.brief_description}</div>
