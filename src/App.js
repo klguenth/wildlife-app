@@ -58,9 +58,9 @@ export default class App extends React.Component {
     );
   }
 
-  findByIndex(index) {
-    for (let i = 0; i<this.context.sightings.length; i++) {
-        if (parseInt(index) === this.context.sightings[i].sighting_id) {
+  findByIndex(index, sightings) {
+    for (let i = 0; i<sightings.length; i++) {
+        if (index === sightings[i].sighting_id) {
             return i;
         }
     }
@@ -68,14 +68,14 @@ export default class App extends React.Component {
 
   handleEditSighting = (sighting) => {
     const index = findSighting(this.state.sightings, sighting.sighting_id);
-    const sightingId = this.context.sightings[index].sighting_id;
+    const sightingId = sighting.sighting_id;
     const sightings = this.state.sightings;
     console.log(index, 'index');
     console.log('sighting', sighting);
     console.log('handleEditSighting run');
-    this.findByIndex(index);
+    this.findByIndex(index, sightings);
     this.setState = ({
-      sightings: sightings.slice(0, sightingId)
+      sightings: sightings.splice(index, 1, sightingId)
     })
     //TODO find index position of updated record. set state with slice- what comes before and after
   }

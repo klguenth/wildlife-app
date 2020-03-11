@@ -24,11 +24,12 @@ export default class SightingEdit extends React.Component {
     handleEditSighting = event => {
         event.preventDefault()
         const sightings = [];
-        const id = this.props.location.pathname.slice(14);
-        const index = this.findById(id);
+        const id = this.props.match.params.sighting_id;
+        const index = this.findById(id)
+        //const id = this.props.location.pathname.slice(14);
         const sightingId = this.context.sightings[index].sighting_id;
         const modifiedSighting = {};
-        const sighting = this.context.sightings.find(id => String(id) === this.props.match.params.sighting_id);
+        const sighting = this.context.sightings.find(sighting => +id === sighting.sighting_id);
         const updatedSighting = {
             ...sighting,
             ...modifiedSighting,
@@ -53,18 +54,18 @@ export default class SightingEdit extends React.Component {
             }
         })
         .then((res) => {
-            modifiedSighting.sighting_id = sightingId;
+            modifiedSighting.sighting_id = id;
             this.context.editSighting(modifiedSighting)
             this.setState({ sightings: modifiedSighting });
             this.props.history.push(`/sightingList`);
         });
     }
-    componentDidUpdate(res) {
-        if (this.props.sightings !== res) {
-            this.setState({ sightings: this.props.sightings });
-        }
-        this.props.history.push(`/sightingList`);
-    };
+    // componentDidUpdate(res) {
+    //     if (this.props.sightings !== res) {
+    //         this.setState({ sightings: this.props.sightings });
+    //     }
+    //     this.props.history.push(`/sightingList`);
+    // };
     
     findById(id) {
         for (let i = 0; i<this.context.sightings.length; i++) {
