@@ -28,6 +28,11 @@ export default class SightingEdit extends React.Component {
         const index = this.findById(id);
         const sightingId = this.context.sightings[index].sighting_id;
         const modifiedSighting = {};
+        const sighting = this.context.sightings.find(id => String(id) === this.props.match.params.sighting_id);
+        const updatedSighting = {
+            ...sighting,
+            ...modifiedSighting,
+        }
         modifiedSighting.title = event.target.title.value;
         modifiedSighting.sighting_date = event.target.sighting_date.value;
         modifiedSighting.species = event.target.species.value;
@@ -48,14 +53,17 @@ export default class SightingEdit extends React.Component {
             }
         })
         .then((res) => {
-            this.context.editSighting(sightingId)
+            modifiedSighting.sighting_id = sightingId;
+            this.context.editSighting(modifiedSighting)
+            this.setState({ sightings: modifiedSighting });
+            this.props.history.push(`/sightingList`);
         });
     }
-    componentDidUpdate(prevProps) {
-        if (this.props.sightings !== prevProps.sightings) {
+    componentDidUpdate(res) {
+        if (this.props.sightings !== res) {
             this.setState({ sightings: this.props.sightings });
         }
-        //this.props.history.push(`/sightingList`);
+        this.props.history.push(`/sightingList`);
     };
     
     findById(id) {

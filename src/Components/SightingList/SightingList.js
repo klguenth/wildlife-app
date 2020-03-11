@@ -8,7 +8,8 @@ export default class SightingList extends React.Component {
         super(props);
         this.handleClick = this.handleClick.bind(this);
         this.state = {
-          clickedIndex: null
+          clickedIndex: null,
+          sightings: []
         };
       }
     
@@ -24,12 +25,15 @@ export default class SightingList extends React.Component {
     }
 
     render() {
+        const value = {
+            sightings: this.state.sightings,
+          };
         const { sightingId } = this.props.match.params
         const sightings = sightingId
             ? findSighting(this.props.sightings, sightingId)
             : this.props.sightings;
         return (
-            <>
+            <ApiContext.Provider value={value}>
                 <header className="listHeader">
                 Sighting List
                 </header>
@@ -44,7 +48,7 @@ export default class SightingList extends React.Component {
                         )}
                     </ul>
                 </section>
-            </>
+            </ApiContext.Provider>
         );
     }
 }

@@ -7,6 +7,7 @@ import SightingForm from './Components/SightingForm/SightingForm.js';
 import SightingList from './Components/SightingList/SightingList.js';
 import SightingEdit from './Components/SightingEditForm/SightingEdit.js';
 import config from './config';
+import { findSighting } from './sightings-helpers';
 import ApiContext from './ApiContext';
 import { Route } from 'react-router-dom';
 import './App.css';
@@ -22,27 +23,27 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-      fetch(`${config.REACT_APP_API_ENDPOINT}/api/sightings/`)
-        .then(res => {
-          if(!res.ok) {
-            throw new Error('Something went wrong.');
-          }
-          return res;
-        })
-        .then(res => res.json())
-        .then(data => {
-          console.log(data);
-          this.setState({
-            sightings: data,
-            error: null
-          });
-        })
-        .catch(err => {
-          this.setState({
-            error: err.message
-          });
+    fetch(`${config.REACT_APP_API_ENDPOINT}/api/sightings/`)
+      .then(res => {
+        if(!res.ok) {
+          throw new Error('Something went wrong.');
+        }
+        return res;
+      })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        this.setState({
+          sightings: data,
+          error: null
         });
-  }
+      })
+      .catch(err => {
+        this.setState({
+          error: err.message
+        });
+      });
+}
 
   renderMainRoutes() {
     return (
@@ -57,8 +58,26 @@ export default class App extends React.Component {
     );
   }
 
-  handleEditSighting = () => {
+  findByIndex(index) {
+    for (let i = 0; i<this.context.sightings.length; i++) {
+        if (parseInt(index) === this.context.sightings[i].sighting_id) {
+            return i;
+        }
+    }
+  }
+
+  handleEditSighting = (sighting) => {
+    const index = findSighting(this.state.sightings, sighting.sighting_id);
+    const sightingId = this.context.sightings[index].sighting_id;
+    const sightings = this.state.sightings;
+    console.log(index, 'index');
+    console.log('sighting', sighting);
     console.log('handleEditSighting run');
+    this.findByIndex(index);
+    this.setState = ({
+      sightings: sightings.slice(0, sightingId)
+    })
+    //TODO find index position of updated record. set state with slice- what comes before and after
   }
 
   handleDeleteSighting = () => {
