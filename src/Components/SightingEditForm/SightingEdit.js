@@ -3,6 +3,7 @@ import SubmitButton from '../SubmitButton/SubmitButton.js';
 import config from '../../config.js';
 import ApiContext from '../../ApiContext.js';
 import '../SightingForm/SightingForm.css';
+import { format, parseISO } from 'date-fns';
 
 export default class SightingEdit extends React.Component {
 
@@ -25,15 +26,14 @@ export default class SightingEdit extends React.Component {
         event.preventDefault()
         const sightings = [];
         const id = this.props.match.params.sighting_id;
-        const index = this.findById(id)
-        //const id = this.props.location.pathname.slice(14);
+        const index = this.findById(id);
         const sightingId = this.context.sightings[index].sighting_id;
         const modifiedSighting = {};
         const sighting = this.context.sightings.find(sighting => +id === sighting.sighting_id);
-        const updatedSighting = {
-            ...sighting,
-            ...modifiedSighting,
-        }
+        // const updatedSighting = {
+        //     ...sighting,
+        //     ...modifiedSighting,
+        // }
         modifiedSighting.title = event.target.title.value;
         modifiedSighting.sighting_date = event.target.sighting_date.value;
         modifiedSighting.species = event.target.species.value;
@@ -60,12 +60,6 @@ export default class SightingEdit extends React.Component {
             this.props.history.push(`/sightingList`);
         });
     }
-    // componentDidUpdate(res) {
-    //     if (this.props.sightings !== res) {
-    //         this.setState({ sightings: this.props.sightings });
-    //     }
-    //     this.props.history.push(`/sightingList`);
-    // };
     
     findById(id) {
         for (let i = 0; i<this.context.sightings.length; i++) {
@@ -105,7 +99,7 @@ export default class SightingEdit extends React.Component {
                             </div>
                             <div className="form-section">
                                 <label htmlFor="sighting-date">Date: </label>
-                                <input type="date" id="sighting_date" min="2000-01-01" max="2020-12-31" defaultValue={this.context.sightings[index].sighting_date.substring(0, 10)} required="" />
+                                <input type="date" id="sighting_date" defaultValue={format(parseISO(this.context.sightings[index].sighting_date), 'dd MMM yyyy')} required />
                             </div>
                             <div className="form-section">
                                 <label htmlFor="behavior-record">Details: </label>

@@ -41,7 +41,7 @@ export default class SightingList extends React.Component {
                     <ul className="sightingList">
                         {sightings.map((sighting, index) =>
                             <li 
-                                key={sighting.sighting_id} 
+                                key={index/*sighting.sighting_id*/} 
                                 onClick={(e) => this.handleClick(index, e)}>
                                 <Sighting sighting={sighting} clickedIndex={this.state.clickedIndex} index={index} />
                             </li>
