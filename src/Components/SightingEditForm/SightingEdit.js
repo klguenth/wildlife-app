@@ -3,7 +3,6 @@ import SubmitButton from '../SubmitButton/SubmitButton.js';
 import config from '../../config.js';
 import ApiContext from '../../ApiContext.js';
 import '../SightingForm/SightingForm.css';
-import { format, parseISO } from 'date-fns';
 
 export default class SightingEdit extends React.Component {
 
@@ -29,7 +28,7 @@ export default class SightingEdit extends React.Component {
         const index = this.findById(id);
         const sightingId = this.context.sightings[index].sighting_id;
         const modifiedSighting = {};
-        const sighting = this.context.sightings.find(sighting => +id === sighting.sighting_id);
+        const sighting = this.context.sightings.find(sighting => id === sighting.sighting_id);
         // const updatedSighting = {
         //     ...sighting,
         //     ...modifiedSighting,
@@ -56,7 +55,7 @@ export default class SightingEdit extends React.Component {
         .then((res) => {
             modifiedSighting.sighting_id = id;
             this.context.editSighting(modifiedSighting)
-            this.setState({ sightings: modifiedSighting });
+            // this.setState({ sightings: modifiedSighting });
             this.props.history.push(`/sightingList`);
         });
     }
@@ -99,7 +98,7 @@ export default class SightingEdit extends React.Component {
                             </div>
                             <div className="form-section">
                                 <label htmlFor="sighting-date">Date: </label>
-                                <input type="date" id="sighting_date" defaultValue={format(parseISO(this.context.sightings[index].sighting_date), 'dd MMM yyyy')} required />
+                                <input type="date" id="sighting_date" defaultValue={this.context.sightings[index].sighting_date} required />
                             </div>
                             <div className="form-section">
                                 <label htmlFor="behavior-record">Details: </label>

@@ -70,14 +70,10 @@ export default class App extends React.Component {
     const index = findSighting(this.state.sightings, sighting.sighting_id);
     const sightingId = sighting.sighting_id;
     const sightings = this.state.sightings;
-    console.log(index, 'index');
-    console.log('sighting', sighting);
-    console.log('handleEditSighting run');
     this.findByIndex(index, sightings);
     this.setState = ({
-      sightings: sightings.splice(index, 1, sightingId)
+      sightings: sightings.splice(index, 1, sighting)
     })
-    //TODO find index position of updated record. set state with slice- what comes before and after
   }
 
   handleDeleteSighting = () => {

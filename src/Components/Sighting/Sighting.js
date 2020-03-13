@@ -44,26 +44,26 @@ export default class Sighting extends React.Component {
     render() {
         const sightingId = this.props.sighting.sighting_id; 
         let sighting;
-        if (this.props.clickedIndex === this.props.index) {
+        // if (this.props.clickedIndex === this.props.index) {
             sighting = (
                 <li>
-                    <div className="sightingTitle">{this.props.sighting.title}</div>
-                    <div className="sightingDate">{format(parseISO(this.props.sighting.sighting_date), 'dd MMM yyyy')}</div>
-                    <div className="sightingSpecies">{this.props.sighting.species}</div>
-                    <div className="sightingLocation">{this.props.sighting.sighting_location}</div>
-                    <div className="sightingBehavior">{this.props.sighting.brief_description}</div>
-                    <p className="sightingDetailedBehavior">{this.props.sighting.detailed_description}</p>
+                    <div className="sightingTitle">Title: {this.props.sighting.title}</div>
+                    {/* <div className="sightingDate">Date: {format(parseISO(this.props.sighting.sighting_date), 'MMM dd yyyy')}</div> */}
+                    <div className="sightingSpecies">Species: {this.props.sighting.species}</div>
+                    <div className="sightingLocation">Location: {this.props.sighting.sighting_location}</div>
+                    <div className="sightingBehavior">Behavior: {this.props.sighting.brief_description}</div>
+                    <p className="sightingDetailedBehavior">Details: {this.props.sighting.detailed_description}</p>
                     <Link to={`/sightingEdit/${sightingId}`} className="editButton" aria-label="edit button">Edit</Link>
                     <button className="deleteButton" type="button" aria-label="delete button" onClick={this.handleDeleteSighting}>Delete</button>
                 </li>
             )
-        } else {
-            sighting = (
-                <li>
-                    <div className="sightingTitle">{this.props.sighting.title}</div>
-                </li>
-            );
-        }
+        // } else {
+        //     sighting = (
+        //         <li>
+        //             <div className="sightingTitle">{this.props.sighting.title}</div>
+        //         </li>
+        //     );
+        // }
         return (
             <div className="wrapper">
                 <ul>

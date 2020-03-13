@@ -32,6 +32,7 @@ export default class SightingList extends React.Component {
         const sightings = sightingId
             ? findSighting(this.props.sightings, sightingId)
             : this.props.sightings;
+            console.log(sightings);
         return (
             <ApiContext.Provider value={value}>
                 <header className="listHeader">
