@@ -3,7 +3,7 @@ import ApiContext from '../../ApiContext.js';
 import config from '../../config.js';
 import './Sighting.css';
 import { Link } from 'react-router-dom';
-import { format, parseISO } from 'date-fns';
+import { format, parseISO, isThisISOWeek } from 'date-fns';
 
 
 
@@ -34,7 +34,6 @@ export default class Sighting extends React.Component {
         .then(() => {
             this.context.deleteSighting(sightingId)
             this.props.onDeleteSighting(sightingId)
-            window.location.reload();
         })
         .catch(error => {
             console.error({ error })
@@ -44,11 +43,11 @@ export default class Sighting extends React.Component {
     render() {
         const sightingId = this.props.sighting.sighting_id; 
         let sighting;
-        // if (this.props.clickedIndex === this.props.index) {
+        if (this.props.clickedIndex === this.props.index) {
             sighting = (
                 <li>
                     <div className="sightingTitle">Title: {this.props.sighting.title}</div>
-                    {/* <div className="sightingDate">Date: {format(parseISO(this.props.sighting.sighting_date), 'MMM dd yyyy')}</div> */}
+                    <div className="sightingDate">Date: {format(parseISO(this.props.sighting.sighting_date), 'MMM dd yyyy')}</div>
                     <div className="sightingSpecies">Species: {this.props.sighting.species}</div>
                     <div className="sightingLocation">Location: {this.props.sighting.sighting_location}</div>
                     <div className="sightingBehavior">Behavior: {this.props.sighting.brief_description}</div>
@@ -57,25 +56,30 @@ export default class Sighting extends React.Component {
                     <button className="deleteButton" type="button" aria-label="delete button" onClick={this.handleDeleteSighting}>Delete</button>
                 </li>
             )
-        // } else {
-        //     sighting = (
-        //         <li>
-        //             <div className="sightingTitle">{this.props.sighting.title}</div>
-        //         </li>
-        //     );
-        // }
+        } else {
+            sighting = (
+                <li>
+                    <div className="sightingTitle">{this.props.sighting.title}</div>
+                </li>
+            );
+        }
         return (
-            <div className="wrapper">
-                <ul>
-                    <li>
-                        <input id="collapsible" type="checkbox" className="toggle" />
-                        {/* <label htmlFor="collapsible" className="sightingLabel">{this.props.sighting.title}</label> */}
-                        <ul className="sighting">
-                            {sighting}
+            <ApiContext.Consumer>
+                {defaultValue => (
+                    <div className="wrapper">
+                        <ul>
+                            <li>
+                            <input id="collapsible" type="checkbox" className="toggle" />
+                                <ul className="sighting" defaultValue={this.handleDeleteSighting}>
+                                    {sighting}
+                                </ul>
+                            </li>
                         </ul>
-                    </li>
-                </ul>
-            </div>
+                    </div>
+                )}
+
+            </ApiContext.Consumer>
+
         );
     }
 }

@@ -29,10 +29,6 @@ export default class SightingEdit extends React.Component {
         const sightingId = this.context.sightings[index].sighting_id;
         const modifiedSighting = {};
         const sighting = this.context.sightings.find(sighting => id === sighting.sighting_id);
-        // const updatedSighting = {
-        //     ...sighting,
-        //     ...modifiedSighting,
-        // }
         modifiedSighting.title = event.target.title.value;
         modifiedSighting.sighting_date = event.target.sighting_date.value;
         modifiedSighting.species = event.target.species.value;

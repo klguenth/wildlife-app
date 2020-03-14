@@ -32,7 +32,6 @@ export default class SightingList extends React.Component {
         const sightings = sightingId
             ? findSighting(this.props.sightings, sightingId)
             : this.props.sightings;
-            console.log(sightings);
         return (
             <ApiContext.Provider value={value}>
                 <header className="listHeader">
@@ -42,7 +41,7 @@ export default class SightingList extends React.Component {
                     <ul className="sightingList">
                         {sightings.map((sighting, index) =>
                             <li 
-                                key={index/*sighting.sighting_id*/} 
+                                key={index} 
                                 onClick={(e) => this.handleClick(index, e)}>
                                 <Sighting sighting={sighting} clickedIndex={this.state.clickedIndex} index={index} />
                             </li>
