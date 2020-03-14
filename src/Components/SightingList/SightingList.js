@@ -33,7 +33,8 @@ export default class SightingList extends React.Component {
             ? findSighting(this.props.sightings, sightingId)
             : this.props.sightings;
         return (
-            <ApiContext.Provider value={value}>
+            // <ApiContext.Provider value={value}>
+            <>
                 <header className="listHeader">
                 Sighting List
                 </header>
@@ -48,7 +49,8 @@ export default class SightingList extends React.Component {
                         )}
                     </ul>
                 </section>
-            </ApiContext.Provider>
+            </>
+            // </ApiContext.Provider>
         );
     }
 }

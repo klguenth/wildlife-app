@@ -23,12 +23,12 @@ export default class SightingEdit extends React.Component {
 
     handleEditSighting = event => {
         event.preventDefault()
-        const sightings = [];
+        // const sightings = [];
         const id = this.props.match.params.sighting_id;
         const index = this.findById(id);
         const sightingId = this.context.sightings[index].sighting_id;
         const modifiedSighting = {};
-        const sighting = this.context.sightings.find(sighting => id === sighting.sighting_id);
+        // const sighting = this.context.sightings.find(sighting => id === sighting.sighting_id);
         modifiedSighting.title = event.target.title.value;
         modifiedSighting.sighting_date = event.target.sighting_date.value;
         modifiedSighting.species = event.target.species.value;

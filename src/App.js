@@ -68,7 +68,7 @@ export default class App extends React.Component {
 
   handleEditSighting = (sighting) => {
     const index = findSighting(this.state.sightings, sighting.sighting_id);
-    const sightingId = sighting.sighting_id;
+    // const sightingId = sighting.sighting_id;
     const sightings = this.state.sightings;
     this.findByIndex(index, sightings);
     this.setState = ({

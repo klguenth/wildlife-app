@@ -3,7 +3,7 @@ import ApiContext from '../../ApiContext.js';
 import config from '../../config.js';
 import './Sighting.css';
 import { Link } from 'react-router-dom';
-import { format, parseISO, isThisISOWeek } from 'date-fns';
+import { format, parseISO } from 'date-fns';
 
 
 
@@ -32,8 +32,10 @@ export default class Sighting extends React.Component {
             return res;
         })
         .then(() => {
+            console.log(this.context);
             this.context.deleteSighting(sightingId)
             this.props.onDeleteSighting(sightingId)
+            this.props.history(`/sightingList`);
         })
         .catch(error => {
             console.error({ error })
