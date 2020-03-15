@@ -8,6 +8,14 @@ import { format, parseISO } from 'date-fns';
 
 
 export default class Sighting extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            sightings: this.props.sightings
+        }
+    }
+
     static defaultProps = {
         onDeleteSighting: () => {},
         onEditSighting: () => {},
@@ -32,10 +40,8 @@ export default class Sighting extends React.Component {
             return res;
         })
         .then(() => {
-            console.log(this.context);
-            this.context.deleteSighting(sightingId)
-            this.props.onDeleteSighting(sightingId)
-            this.props.history(`/sightingList`);
+            this.context.deleteSighting(sightingId);
+            // this.props.onDeleteSighting(sightingId);
         })
         .catch(error => {
             console.error({ error })

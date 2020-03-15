@@ -51,7 +51,6 @@ export default class SightingEdit extends React.Component {
         .then((res) => {
             modifiedSighting.sighting_id = id;
             this.context.editSighting(modifiedSighting)
-            // this.setState({ sightings: modifiedSighting });
             this.props.history.push(`/sightingList`);
         });
     }
