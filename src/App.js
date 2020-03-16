@@ -78,11 +78,12 @@ export default class App extends React.Component {
 
   handleDeleteSighting = (sighting) => {
     console.log('handleDeleteSighting run');
+    let updatedSightings = [];
     const index = findSighting(this.state.sightings, sighting.sighting_id);
     const sightings = this.state.sightings;
     this.findByIndex(index, sightings);
-    this.setState((state) => {
-      return {sightings: sightings.splice(index, 1)};
+    this.setState(() => {
+      return updatedSightings = sightings.filter(sightings => sighting.sighting_id > 0);
     })
   }
 
