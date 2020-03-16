@@ -81,8 +81,8 @@ export default class App extends React.Component {
     const index = findSighting(this.state.sightings, sighting.sighting_id);
     const sightings = this.state.sightings;
     this.findByIndex(index, sightings);
-    this.setState = ({
-      sightings: sightings.splice(index, 1)
+    this.setState((state) => {
+      return {sightings: sightings.splice(index, 1)};
     })
   }
 
