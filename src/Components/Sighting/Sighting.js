@@ -2,19 +2,11 @@ import React from 'react';
 import ApiContext from '../../ApiContext.js';
 import config from '../../config.js';
 import './Sighting.css';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { format, parseISO } from 'date-fns';
 
 
-
-export default class Sighting extends React.Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            sightings: this.props.sightings
-        }
-    }
+class Sighting extends React.Component {
 
     static defaultProps = {
         onDeleteSighting: () => {},
@@ -41,7 +33,7 @@ export default class Sighting extends React.Component {
         })
         .then(() => {
             this.context.deleteSighting(sightingId);
-            // this.props.onDeleteSighting(sightingId);
+            this.props.history.push('/sightingList')
         })
         .catch(error => {
             console.error({ error })
@@ -85,9 +77,9 @@ export default class Sighting extends React.Component {
                         </ul>
                     </div>
                 )}
-
             </ApiContext.Consumer>
-
         );
     }
 }
+
+export default withRouter(Sighting);

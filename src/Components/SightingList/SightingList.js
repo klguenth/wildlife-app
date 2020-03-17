@@ -9,7 +9,7 @@ export default class SightingList extends React.Component {
         this.handleClick = this.handleClick.bind(this);
         this.state = {
           clickedIndex: null,
-          sightings: []
+        //   sightings: []
         };
       }
     
@@ -18,7 +18,6 @@ export default class SightingList extends React.Component {
             params: {}
         }
     }
-    static contextType = ApiContext
 
     handleClick = (clickedIndex, e) => {
         this.setState({clickedIndex})
@@ -26,9 +25,9 @@ export default class SightingList extends React.Component {
 
     render() {
         const { sightingId } = this.props.match.params
-        const sightings = sightingId
-            ? findSighting(this.props.sightings, sightingId)
-            : this.props.sightings;
+        // const sightings = sightingId
+        //     ? findSighting(this.props.sightings, sightingId)
+        //     : this.props.sightings;
         return (
             <>
                 <header className="listHeader">
@@ -36,7 +35,7 @@ export default class SightingList extends React.Component {
                 </header>
                 <section className="sightingList">
                     <ul className="sightingList">
-                        {sightings.map((sighting, index) =>
+                        {this.props.sightings.map((sighting, index) =>
                             <li 
                                 key={index} 
                                 onClick={(e) => this.handleClick(index, e)}>

@@ -50,7 +50,7 @@ export default class App extends React.Component {
       <>
         <Route path='/login' component={Login} />
         <Route path='/sightingForm' component={SightingForm} />
-        <Route path="/sightingList" render={() => <SightingList sightings={this.state.sightings} />} />
+        <Route path="/sightingList" render={() => <SightingList sightings={this.state.sightings} component={SightingList}/>} />
         <Route path='/signupForm' component={SignUpForm} />
         <Route path='/sightingEdit/:sighting_id' render={(props) => <SightingEdit {...props} />} />
         <Route exact path='/' component={LandingPage} />
@@ -77,14 +77,13 @@ export default class App extends React.Component {
   }
 
   handleDeleteSighting = (sighting) => {
-    console.log('handleDeleteSighting run');
-    let updatedSightings = [];
     const index = findSighting(this.state.sightings, sighting.sighting_id);
     const sightings = this.state.sightings;
     this.findByIndex(index, sightings);
-    this.setState(() => {
-      return updatedSightings = sightings.filter(sightings => sighting.sighting_id > 0);
+    this.setState = ({
+      sightings: sightings.splice(index, 1)
     })
+    console.log(this.state.sightings);
   }
 
   render() {
