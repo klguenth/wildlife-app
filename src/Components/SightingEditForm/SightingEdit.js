@@ -93,7 +93,7 @@ export default class SightingEdit extends React.Component {
                             </div>
                             <div className="form-section">
                                 <label htmlFor="sighting-date">Date: </label>
-                                <input type="date" id="sighting_date" defaultValue={this.context.sightings[index].sighting_date} required />
+                                <input type="date" id="sighting_date" placeholder="2019-07-01" min="2000-01-01" max="2020-12-31" defaultValue={this.context.sightings[index].sighting_date} required />
                             </div>
                             <div className="form-section">
                                 <label htmlFor="behavior-record">Details: </label>
