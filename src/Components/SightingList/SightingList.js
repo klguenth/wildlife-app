@@ -1,7 +1,5 @@
 import React from 'react';
-import ApiContext from '../../ApiContext';
 import Sighting from '../Sighting/Sighting.js';
-import { findSighting } from '../../sightings-helpers';
 
 export default class SightingList extends React.Component {
     constructor(props) {
