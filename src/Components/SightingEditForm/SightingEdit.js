@@ -23,12 +23,10 @@ export default class SightingEdit extends React.Component {
 
     handleEditSighting = event => {
         event.preventDefault()
-        // const sightings = [];
         const id = this.props.match.params.sighting_id;
         const index = this.findById(id);
         const sightingId = this.context.sightings[index].sighting_id;
         const modifiedSighting = {};
-        // const sighting = this.context.sightings.find(sighting => id === sighting.sighting_id);
         modifiedSighting.title = event.target.title.value;
         modifiedSighting.sighting_date = event.target.sighting_date.value;
         modifiedSighting.species = event.target.species.value;
@@ -93,7 +91,7 @@ export default class SightingEdit extends React.Component {
                             </div>
                             <div className="form-section">
                                 <label htmlFor="sighting-date">Date: </label>
-                                <input type="date" id="sighting_date" placeholder="2019-07-01" min="2000-01-01" max="2020-12-31" defaultValue={this.context.sightings[index].sighting_date} required />
+                                <input type="date" id="sighting_date" min="2000-01-01" max="2020-12-31" defaultValue={this.context.sightings[index].sighting_date.slice(0, 10)} required />
                             </div>
                             <div className="form-section">
                                 <label htmlFor="behavior-record">Details: </label>

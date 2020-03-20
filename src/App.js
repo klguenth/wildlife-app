@@ -32,7 +32,6 @@ export default class App extends React.Component {
       })
       .then(res => res.json())
       .then(data => {
-        console.log(data);
         this.setState({
           sightings: data,
           error: null
@@ -58,19 +57,9 @@ export default class App extends React.Component {
     );
   }
 
-  findByIndex(index, sightings) {
-    for (let i = 0; i<sightings.length; i++) {
-        if (index === sightings[i].sighting_id) {
-            return i;
-        }
-    }
-  }
-
   handleEditSighting = (sighting) => {
     const index = findSighting(this.state.sightings, sighting.sighting_id);
-    // const sightingId = sighting.sighting_id;
     const sightings = this.state.sightings;
-    this.findByIndex(index, sightings);
     this.setState = ({
       sightings: sightings.splice(index, 1, sighting)
     })
@@ -79,11 +68,9 @@ export default class App extends React.Component {
   handleDeleteSighting = (sighting) => {
     const index = findSighting(this.state.sightings, sighting.sighting_id);
     const sightings = this.state.sightings;
-    this.findByIndex(index, sightings);
     this.setState = ({
       sightings: sightings.splice(index, 1)
     })
-    console.log(this.state.sightings);
   }
 
   render() {

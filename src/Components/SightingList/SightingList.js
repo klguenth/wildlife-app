@@ -9,7 +9,6 @@ export default class SightingList extends React.Component {
         this.handleClick = this.handleClick.bind(this);
         this.state = {
           clickedIndex: null,
-        //   sightings: []
         };
       }
     
@@ -25,9 +24,6 @@ export default class SightingList extends React.Component {
 
     render() {
         const { sightingId } = this.props.match.params
-        // const sightings = sightingId
-        //     ? findSighting(this.props.sightings, sightingId)
-        //     : this.props.sightings;
         return (
             <>
                 <header className="listHeader">
