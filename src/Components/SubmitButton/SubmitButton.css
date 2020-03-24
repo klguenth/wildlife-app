@@ -16,6 +16,7 @@
 .submitButton:hover {
     color:#ffffff;
     background-color:#58703A;
+    transition: .3s ease-in;
 }
 @media all and (max-width:30em) {
     .submitButton {

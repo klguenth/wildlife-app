@@ -16,7 +16,7 @@ input[type='checkbox'] {
 
 .wrapper {
     display: block;
-    margin: 20px;
+    margin: 20px 5px;
     width: 600px;
     padding-top: 10px;
 }
@@ -62,6 +62,7 @@ ul ul li {
 .deleteButton:hover {
     color:#ffffff;
     background-color:#58703A;
+    transition: .3s ease-in;
 }
 
 /*edit button*/
@@ -79,4 +80,11 @@ ul ul li {
 .editButton:hover {
     color:#ffffff;
     background-color:#58703A;
+    transition: .3s ease-in;
+}
+
+@media screen and (max-width: 400px) {
+    .wrapper {
+        width: 100%;
+    }
 }

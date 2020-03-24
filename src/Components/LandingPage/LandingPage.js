@@ -12,8 +12,8 @@ export default class LandingPage extends React.Component {
                     <div className="conserveQuote">
                         <p>"In the end we will conserve only what we love; we will love only what we understand; we will understand only what we are taught." -Baba Dioum</p>
                     </div>
-                    <div className="imgContainer1">
-                        <img src={require('./humpback.jpeg')} alt="humpback whale"></img>
+                    <div className="imgContainer">
+                        <img src={require('./humpback.jpeg')} alt="humpback whale" className="animalImg"></img>
                     </div>
                     <div className="wwSummaries">
                         <div className="wwSummary1">
@@ -30,8 +30,8 @@ export default class LandingPage extends React.Component {
                             {/* <Link to='/SignUpForm'>Sign Up</Link> */}
                         </div>
                     </div>
-                    <div className="imgContainer2">
-                        <img src={require('./seal.jpeg')} alt="seal"></img>
+                    <div className="imgContainer">
+                        <img src={require('./seal.jpeg')} alt="seal" className="animalImg"></img>
                     </div>
                 </section>
             </div>

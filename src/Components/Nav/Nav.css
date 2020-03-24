@@ -3,7 +3,7 @@
 #hamburgerNav {
     width: 100%;
     position: fixed;
-    top: 10px;
+    top: 0px;
     z-index: 10;
     background-color: #ffffff;
 }
@@ -49,6 +49,7 @@
     color: #ffffff;
     background-color: #58703A;
     border-radius: 3px;
+    transition: .3s ease-in;
 }
 #hamburgerNav ul li a:hover {
     color: #ffffff;

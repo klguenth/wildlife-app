@@ -31,21 +31,29 @@
     padding-top: 50px;
 }
 
-.imgContainer1 {
+.imgContainer {
     background-color: #585858;
-    height: 100%;
-    width: 100%;
     text-align: center;
 }
 
-.imgContainer img {
-    height: 100%;
-    width: 100%;
+.animalImg {
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+h4 {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+    word-break: break-word;
 }
 
 .wwSummaries {
     margin-top: 0px;
     width: 100%;
+    word-wrap: break-word;
 }
 
 .wwSummary1 {
@@ -61,4 +69,46 @@
 .wwSummary3 {
     background-color: #A5BB8A;
     padding: 50px;
+}
+
+@media screen and (min-width: 400px) {
+
+    h4 {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        margin: auto;
+        word-break: break-word;
+    }
+
+    .wwSummaries {
+        margin-top: 0px;
+        width: 100%;
+        word-wrap: break-word;
+    }
+
+    .wwSummary1 {
+        background-color: #58703A;
+        padding: 100px;
+    }
+    
+    .wwSummary2 {
+        background-color: #88AD5A;
+        padding: 75px;
+    }
+    
+    .wwSummary3 {
+        background-color: #A5BB8A;
+        padding: 50px;
+    }
+}
+
+@media screen and (min-width: 520px) {
+    h4 {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        margin: auto;
+        word-break: break-word;
+    }
 }

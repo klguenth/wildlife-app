@@ -69,7 +69,7 @@ class Sighting extends React.Component {
                     <div className="wrapper">
                         <ul>
                             <li>
-                            <input id="collapsible" type="checkbox" className="toggle" />
+                                <input id="collapsible" type="checkbox" className="toggle" />
                                 <ul className="sighting" defaultValue={this.handleDeleteSighting}>
                                     {sighting}
                                 </ul>
