@@ -8,12 +8,14 @@
     background-color: #ffffff;
 }
 #hamburgerNav label {
-    padding: 10px;
+    background-color: #58703A;
+    width: 100%;
 }
 
 #hamburgerIcon {
     display: none;
 }
+
 /*Hide Hamburger*/
 /* #hamburgerNav label, #hamburger, .whaleTail {
     display: none;
@@ -42,12 +44,11 @@
     border-bottom: 2px solid #58703A;
     padding: 10px;
     margin: 5px;
-    color: #ffffff;
+    /* color: #ffffff; */
     transition: all 0.2s;
 }
 #hamburgerNav ul li:hover {
     color: #ffffff;
-    background-color: #58703A;
     border-radius: 3px;
     transition: .3s ease-in;
 }
@@ -76,7 +77,7 @@
     /*break items down into vertical*/
     #hamburgerNav ul li {
         display: block;
-        width: 150px;
+        width: 100%;
         text-align: center;
         border-top: 1px solid #ffffff;
     }

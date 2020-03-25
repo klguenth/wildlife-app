@@ -29,6 +29,7 @@
 }
 
 .form-section label {
+    display: inline-block;
     color: #000000;
     font-size: 20px;
     width: 100px;
@@ -57,4 +58,13 @@ input:hover {
     box-shadow: 5px 5px 5px #999999;
     border-radius: 3px;
     transition: .3s ease-in;
+}
+
+@media screen and (min-width: 320px) {
+    textarea {
+        display: block;
+        width: 300px;
+        margin: 10px auto;
+        padding: 5px;
+    }
 }

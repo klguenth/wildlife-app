@@ -88,3 +88,9 @@ ul ul li {
         width: 100%;
     }
 }
+
+@media screen and (min-width: 320px) {
+    .wrapper {
+        width: 250px;
+    }
+}

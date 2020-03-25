@@ -54,6 +54,7 @@ input[type="date"] {
 label {
     color: #000000;
     width: 100px;
+    text-align: left;
 }
 
 @media screen and (min-width: 400px) {
