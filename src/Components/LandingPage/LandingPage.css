@@ -72,6 +72,28 @@ h4 {
 }
 
 @media screen and (min-width: 320px) {
+
+    .mainHeader {
+        background-color: #58703A;
+        height: 300px;
+        width: 100%;
+        color: #ffffff;
+        font-size: 52px;
+        text-align: center;
+        margin-top: 10px;
+        line-height: 300px;
+    }
+    .imgContainer {
+        background-color: #585858;
+        text-align: center;
+    }
+    
+    .animalImg {
+        max-height: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    
     h4 {
         display: flex;
         justify-content: center;
