@@ -24,7 +24,8 @@ input[type='checkbox'] {
 
 ul {
     list-style-type: none;
-    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0;
 }
 
@@ -46,7 +47,7 @@ label:hover {
     color: #ffffff;
 }
 
-ul ul li {
+ul li {
     padding: 10px;
     text-align: center;
 }
@@ -91,10 +92,22 @@ ul ul li {
         width: 100%;
         text-align: center;
     }
+
+    ul {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @media screen and (max-width: 320px) {
+    
     .wrapper {
-        width: 300px;
+        width: 100%;
+        margin: auto;
+    }
+
+    ul {
+        margin-left: auto;
+        margin-right: auto;
     }
 }

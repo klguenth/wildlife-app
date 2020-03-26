@@ -67,13 +67,9 @@ class Sighting extends React.Component {
             <ApiContext.Consumer>
                 {defaultValue => (
                     <div className="wrapper">
-                        <ul>
-                            <li>
-                                <input id="collapsible" type="checkbox" className="toggle" />
-                                <ul className="sighting" defaultValue={this.handleDeleteSighting}>
-                                    {sighting}
-                                </ul>
-                            </li>
+                        <input id="collapsible" type="checkbox" className="toggle" />
+                        <ul className="sighting" defaultValue={this.handleDeleteSighting}>
+                            {sighting}
                         </ul>
                     </div>
                 )}
