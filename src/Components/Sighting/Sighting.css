@@ -11,13 +11,13 @@ input[type='checkbox'] {
     text-align: center;
     border: 1px solid #000000;
     border-radius: 5px;
-    max-width: 700px;
+    width: 100%;
 }
 
 .wrapper {
     display: block;
     margin: 20px 5px;
-    width: 800px;
+    width: 100%;
     padding-top: 10px;
     text-align: center;
 }
@@ -86,11 +86,19 @@ ul li {
     transition: .3s ease-in;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-with: 720px) {
     .wrapper {
-        display: block;
         width: 100%;
         text-align: center;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .wrapper {
+        width: 100%;
+        text-align: center;
+        margin: auto;
     }
 
     ul {
@@ -99,8 +107,7 @@ ul li {
     }
 }
 
-@media screen and (max-width: 320px) {
-    
+@media screen and (min-width: 320px) {
     .wrapper {
         width: 100%;
         margin: auto;
