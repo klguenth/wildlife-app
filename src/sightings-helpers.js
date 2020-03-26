@@ -1,4 +1,6 @@
 export const findSighting = (sightings, sightingId) => {
+    console.log('sightings', sightings);
+    console.log('sightingId', sightingId);
     return sightings.findIndex(sighting => sighting.sighting_id == sightingId)
 }
 

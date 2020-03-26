@@ -13,7 +13,7 @@ class Sighting extends React.Component {
         onEditSighting: () => {},
         match: {
             params: {}
-        }
+        },
     }
     static contextType = ApiContext;
 
@@ -53,7 +53,7 @@ class Sighting extends React.Component {
                     <div className="sightingBehavior">Behavior: {this.props.sighting.brief_description}</div>
                     <p className="sightingDetailedBehavior">Details: {this.props.sighting.detailed_description}</p>
                     <Link to={`/sightingEdit/${sightingId}`} className="editButton" aria-label="edit button">Edit</Link>
-                    <button className="deleteButton" type="button" aria-label="delete button" onClick={this.handleDeleteSighting}>Delete</button>
+                    <button className="deleteButton" type="button" aria-label="delete button" onClick={this.handleDeleteSighting.bind(this)}>Delete</button>
                 </li>
             )
         } else {

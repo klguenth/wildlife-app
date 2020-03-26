@@ -8,18 +8,19 @@ input[type='checkbox'] {
 
 /*container div*/
 .sighting {
+    display: block;
     text-align: center;
     border: 1px solid #000000;
     border-radius: 5px;
-    width: 100%;
+    padding: 10px;
+    width: 400px;
 }
 
 .wrapper {
     display: block;
     margin: 20px 5px;
-    width: 100%;
-    padding-top: 10px;
     text-align: center;
+    width: 800px;
 }
 
 ul {
@@ -48,8 +49,8 @@ label:hover {
 }
 
 ul li {
-    padding: 10px;
     text-align: center;
+    padding: 5px;
 }
 
 /*delete button*/
@@ -109,8 +110,9 @@ ul li {
 
 @media screen and (min-width: 320px) {
     .wrapper {
+        text-align: center;
         width: 100%;
-        margin: auto;
+        max-width: 300px;
     }
 
     ul {

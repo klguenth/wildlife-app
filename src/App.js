@@ -20,6 +20,7 @@ export default class App extends React.Component {
       loggedIn: true,
       sightings: [],
     };
+    this.handleDeleteSighting = this.handleDeleteSighting.bind(this);
   }
 
   componentDidMount() {
@@ -67,10 +68,12 @@ export default class App extends React.Component {
 
   handleDeleteSighting = (sighting) => {
     const index = findSighting(this.state.sightings, sighting.sighting_id);
+    console.log(index);
     const sightings = this.state.sightings;
     this.setState = ({
       sightings: sightings.splice(index, 1)
     })
+    console.log(sightings);
   }
 
   render() {
