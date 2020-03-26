@@ -11,14 +11,15 @@ input[type='checkbox'] {
     text-align: center;
     border: 1px solid #000000;
     border-radius: 5px;
-    max-width: 800px;
+    max-width: 700px;
 }
 
 .wrapper {
     display: block;
     margin: 20px 5px;
-    width: 600px;
+    width: 800px;
     padding-top: 10px;
+    text-align: center;
 }
 
 ul {
@@ -47,6 +48,7 @@ label:hover {
 
 ul ul li {
     padding: 10px;
+    text-align: center;
 }
 
 /*delete button*/
@@ -85,12 +87,14 @@ ul ul li {
 
 @media screen and (max-width: 400px) {
     .wrapper {
+        display: block;
         width: 100%;
+        text-align: center;
     }
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 320px) {
     .wrapper {
-        width: 250px;
+        width: 300px;
     }
 }
