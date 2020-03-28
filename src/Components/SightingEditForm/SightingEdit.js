@@ -21,6 +21,7 @@ export default class SightingEdit extends React.Component {
     }
     static contextType = ApiContext;
 
+//edit sighting in sighting list
     handleEditSighting = event => {
         event.preventDefault()
         const id = this.props.match.params.sighting_id;

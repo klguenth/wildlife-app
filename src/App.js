@@ -23,6 +23,7 @@ export default class App extends React.Component {
     this.handleDeleteSighting = this.handleDeleteSighting.bind(this);
   }
 
+//performs initial fetch of sightings
   componentDidMount() {
     fetch(`${config.REACT_APP_API_ENDPOINT}/api/sightings/`)
       .then(res => {
@@ -45,6 +46,7 @@ export default class App extends React.Component {
       });
 }
 
+//renders all routes for application
   renderMainRoutes() {
     return (
       <>
@@ -58,6 +60,7 @@ export default class App extends React.Component {
     );
   }
 
+//sets state for sighting edits
   handleEditSighting = (sighting) => {
     const index = findSighting(this.state.sightings, sighting.sighting_id);
     const sightings = this.state.sightings;
@@ -66,6 +69,7 @@ export default class App extends React.Component {
     })
   }
 
+//sets state for sighting delete
   handleDeleteSighting = (sighting) => {
     console.log(sighting);
     const index = findSighting(this.state.sightings, sighting);
@@ -77,7 +81,6 @@ export default class App extends React.Component {
   }
 
   render() {
-
     const value = {
       sightings: this.state.sightings,
       deleteSighting: this.handleDeleteSighting,

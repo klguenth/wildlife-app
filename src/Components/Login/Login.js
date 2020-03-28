@@ -6,11 +6,6 @@ import SubmitButton from '../SubmitButton/SubmitButton';
 export default class Login extends React.Component {
     handleSubmit = (ev) => {
         ev.preventDefault()
-        //const { username, password } = ev.target
-        /*saveCredentials({
-            username: username.value,
-            password: password.value,
-        })*/
     }
     render() {
         return (

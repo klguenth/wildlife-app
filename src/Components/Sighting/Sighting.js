@@ -16,7 +16,8 @@ class Sighting extends React.Component {
         },
     }
     static contextType = ApiContext;
-
+    
+//delete sighting from sighting list
     handleDeleteSighting = e => {
         e.preventDefault()
         const sightingId = this.props.sighting.sighting_id;

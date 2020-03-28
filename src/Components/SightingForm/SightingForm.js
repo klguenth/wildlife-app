@@ -10,7 +10,8 @@ export default class SightingForm extends React.Component {
         addSighting: () => {},
     }
     static contextType = ApiContext;
-
+    
+//Add a sighting to sighting list
     handleAddSighting = event => {
         event.preventDefault()
         const newSighting = {};
