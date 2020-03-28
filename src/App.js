@@ -71,9 +71,7 @@ export default class App extends React.Component {
 
 //sets state for sighting delete
   handleDeleteSighting = (sighting) => {
-    console.log(sighting);
     const index = findSighting(this.state.sightings, sighting);
-    console.log(index);
     const sightings = this.state.sightings;
     this.setState = ({
       sightings: sightings.splice(index, 1)
