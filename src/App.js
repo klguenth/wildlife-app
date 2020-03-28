@@ -1,8 +1,6 @@
 import React from 'react';
 import Nav from './Components/Nav/Nav.js';
-import SignUpForm from './Components/SignUpForm/SignUpForm.js';
 import LandingPage from './Components/LandingPage/LandingPage.js';
-import Login from './Components/Login/Login.js';
 import SightingForm from './Components/SightingForm/SightingForm.js';
 import SightingList from './Components/SightingList/SightingList.js';
 import SightingEdit from './Components/SightingEditForm/SightingEdit.js';
@@ -50,10 +48,8 @@ export default class App extends React.Component {
   renderMainRoutes() {
     return (
       <>
-        <Route path='/login' component={Login} />
         <Route path='/sightingForm' component={SightingForm} />
         <Route path='/sightingList' render={() => <SightingList sightings={this.state.sightings} component={SightingList}/>} />
-        <Route path='/signupForm' component={SignUpForm} />
         <Route path='/sightingEdit/:sighting_id' render={(props) => <SightingEdit {...props} />} />
         <Route exact path='/' component={LandingPage} />
       </>

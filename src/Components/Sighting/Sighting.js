@@ -43,7 +43,7 @@ class Sighting extends React.Component {
 
     render() {
         let sighting;
-        const sightingId = this.context.sighting.sighting_id; 
+        const sightingId = this.props.sighting.sighting_id; 
         console.log(sighting);
         if (this.props.clickedIndex === this.props.index) {
             sighting = (
