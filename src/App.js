@@ -5,8 +5,8 @@ import SightingForm from './Components/SightingForm/SightingForm.js';
 import SightingList from './Components/SightingList/SightingList.js';
 import SightingEdit from './Components/SightingEditForm/SightingEdit.js';
 import config from './config';
-import { findSighting } from './sightings-helpers';
 import ApiContext from './ApiContext';
+import { findSighting } from './sightings-helpers';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 
@@ -42,7 +42,7 @@ export default class App extends React.Component {
           error: err.message
         });
       });
-}
+  }
 
 //renders all routes for application
   renderMainRoutes() {
