@@ -52,7 +52,7 @@ export default class App extends React.Component {
       <>
         <Route path='/login' component={Login} />
         <Route path='/sightingForm' component={SightingForm} />
-        <Route path="/sightingList" render={() => <SightingList sightings={this.state.sightings} component={SightingList}/>} />
+        <Route path='/sightingList' render={() => <SightingList sightings={this.state.sightings} component={SightingList}/>} />
         <Route path='/signupForm' component={SignUpForm} />
         <Route path='/sightingEdit/:sighting_id' render={(props) => <SightingEdit {...props} />} />
         <Route exact path='/' component={LandingPage} />
@@ -87,7 +87,7 @@ export default class App extends React.Component {
 
     return (
       <ApiContext.Provider value={value}>
-        <div className="nav">
+        <div className='nav'>
           <Nav loggedIn={this.state.loggedIn} />
         </div>
         <main className='app'>

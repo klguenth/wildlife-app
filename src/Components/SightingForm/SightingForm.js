@@ -50,30 +50,30 @@ export default class SightingForm extends React.Component {
                 New Sighting
                 </header>
                 <div id='sightingFormBody'>
-                    <form id="record-sighting" onSubmit={this.handleAddSighting}>
-                        <div className="form-section">
-                            <label htmlFor="sighting-title">Title: </label>
-                            <input type="text" id="title" placeholder="Humpbacks Feeding" required />
+                    <form id='record-sighting' onSubmit={this.handleAddSighting}>
+                        <div className='form-section'>
+                            <label htmlFor='sighting-title'>Title: </label>
+                            <input type='text' id='title' placeholder='Humpbacks Feeding' required />
                         </div>
-                        <div className="form-section">
-                            <label htmlFor="species-name">Species: </label>
-                            <input type="text" id="species" placeholder="Humpback Whale" required />
+                        <div className='form-section'>
+                            <label htmlFor='species-name'>Species: </label>
+                            <input type='text' id='species' placeholder='Humpback Whale' required />
                         </div>
-                        <div className="form-section">
-                            <label htmlFor="behavior-short">Behavior: </label>
-                            <input type="text" id="brief_description" placeholder="Feeding" required />
+                        <div className='form-section'>
+                            <label htmlFor='behavior-short'>Behavior: </label>
+                            <input type='text' id='brief_description' placeholder='Feeding' required />
                         </div>
-                        <div className="form-section">
-                            <label htmlFor="sighting-location">Location: </label>
-                            <input type="text" id="sighting_location" placeholder="Location" required />
+                        <div className='form-section'>
+                            <label htmlFor='sighting-location'>Location: </label>
+                            <input type='text' id='sighting_location' placeholder='Location' required />
                         </div>
-                        <div className="form-section">
-                            <label htmlFor="sighting-date">Date: </label>
-                            <input type="date" id="sighting_date" placeholder="2019-07-01" min="2000-01-01" max="2020-12-31" required="" />
+                        <div className='form-section'>
+                            <label htmlFor='sighting-date'>Date: </label>
+                            <input type='date' id='sighting_date' placeholder='2019-07-01' min='2000-01-01' max='2020-12-31' required='' />
                         </div>
-                        <div className="form-section">
-                            <label htmlFor="behavior-record">Details: </label>
-                            <textarea id="detailed_description" placeholder="Enter sighting details here" rows="15" required />
+                        <div className='form-section'>
+                            <label htmlFor='behavior-record'>Details: </label>
+                            <textarea id='detailed_description' placeholder='Enter sighting details here' rows='15' required />
                         </div>
                         <SubmitButton />
                     </form>

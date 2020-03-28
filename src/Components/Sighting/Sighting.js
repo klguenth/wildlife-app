@@ -43,25 +43,25 @@ class Sighting extends React.Component {
 
     render() {
         let sighting;
-        const sightingId = this.props.sighting.sighting_id; 
+        const sightingId = this.context.sighting.sighting_id; 
         console.log(sighting);
         if (this.props.clickedIndex === this.props.index) {
             sighting = (
                 <li>
-                    <div className="sightingTitle">Title: {this.props.sighting.title}</div>
-                    <div className="sightingDate">Date: {format(parseISO(this.props.sighting.sighting_date), 'MMM dd yyyy')}</div>
-                    <div className="sightingSpecies">Species: {this.props.sighting.species}</div>
-                    <div className="sightingLocation">Location: {this.props.sighting.sighting_location}</div>
-                    <div className="sightingBehavior">Behavior: {this.props.sighting.brief_description}</div>
-                    <p className="sightingDetailedBehavior">Details: {this.props.sighting.detailed_description}</p>
-                    <Link to={`/sightingEdit/${sightingId}`} className="editButton" aria-label="edit button">Edit</Link>
-                    <button className="deleteButton" type="button" aria-label="delete button" onClick={this.handleDeleteSighting.bind(this)}>Delete</button>
+                    <div className='sightingTitle'>Title: {this.props.sighting.title}</div>
+                    <div className='sightingDate'>Date: {format(parseISO(this.props.sighting.sighting_date), 'MMM dd yyyy')}</div>
+                    <div className='sightingSpecies'>Species: {this.props.sighting.species}</div>
+                    <div className='sightingLocation'>Location: {this.props.sighting.sighting_location}</div>
+                    <div className='sightingBehavior'>Behavior: {this.props.sighting.brief_description}</div>
+                    <p className='sightingDetailedBehavior'>Details: {this.props.sighting.detailed_description}</p>
+                    <Link to={`/sightingEdit/${sightingId}`} className='editButton' aria-label='edit button'>Edit</Link>
+                    <button className='deleteButton' type='button' aria-label='delete button' onClick={this.handleDeleteSighting.bind(this)}>Delete</button>
                 </li>
             )
         } else {
             sighting = (
                 <li>
-                    <div className="sightingTitle">{this.props.sighting.title}</div>
+                    <div className='sightingTitle'>{this.props.sighting.title}</div>
                 </li>
             );
         }
@@ -69,8 +69,8 @@ class Sighting extends React.Component {
             <ApiContext.Consumer>
                 {defaultValue => (
                     <div>
-                        <input id="collapsible" type="checkbox" className="toggle" />
-                        <ul className="sighting" defaultValue={this.handleDeleteSighting}>
+                        <input id='collapsible' type='checkbox' className='toggle' />
+                        <ul className='sighting' defaultValue={this.handleDeleteSighting}>
                             {sighting}
                         </ul>
                     </div>

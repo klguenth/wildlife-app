@@ -24,11 +24,11 @@ export default class SightingList extends React.Component {
         const { sightingId } = this.props.match.params
         return (
             <>
-                <header className="listHeader">
+                <header className='listHeader'>
                 Sighting List
                 </header>
-                <section className="sightingList">
-                    <ul className="sightingList">
+                <section className='sightingList'>
+                    <ul className='sightingList'>
                         {this.props.sightings.map((sighting, index) =>
                             <li 
                                 key={index} 

@@ -11,11 +11,11 @@ export default class Nav extends React.Component {
             <li><Link to='/SightingList'>Sighting List</Link></li></>
         }
         return (
-            <nav id="hamburgerNav">
-                <label htmlFor="hamburger" id="hamburgerIcon">&#9776;</label>
-                <input type="checkbox" id="hamburger"/>
+            <nav id='hamburgerNav'>
+                <label htmlFor='hamburger' id='hamburgerIcon'>&#9776;</label>
+                <input type='checkbox' id='hamburger'/>
                     <ul>
-                    <img src={require("./whale.png")} className="whaleTail" alt="whaletail"></img>
+                    <img src={require('./whale.png')} className='whaleTail' alt='whaletail'></img>
                         <li><Link to='/'>Home</Link></li>
                         {/* <li><Link to='/Login'>Login</Link></li> */}
                         {buttons}

@@ -73,30 +73,30 @@ export default class SightingEdit extends React.Component {
                     Edit Sighting
                     </header>
                     <div id='sightingFormBody'>
-                        <form id="record-sighting" onSubmit={this.handleEditSighting} action=''>
-                            <div className="form-section">
-                                <label htmlFor="sighting-title">Title: </label>
-                                <input type="text" id="title" defaultValue={this.context.sightings[index].title} required />
+                        <form id='record-sighting' onSubmit={this.handleEditSighting} action=''>
+                            <div className='form-section'>
+                                <label htmlFor='sighting-title'>Title: </label>
+                                <input type='text' id='title' defaultValue={this.context.sightings[index].title} required />
                             </div>
-                            <div className="form-section">
-                                <label htmlFor="species-name">Species: </label>
-                                <input type="text" id="species" defaultValue={this.context.sightings[index].species} required />
+                            <div className='form-section'>
+                                <label htmlFor='species-name'>Species: </label>
+                                <input type='text' id='species' defaultValue={this.context.sightings[index].species} required />
                             </div>
-                            <div className="form-section">
-                                <label htmlFor="behavior-short">Behavior: </label>
-                                <input type="text" id="brief_description" defaultValue={this.context.sightings[index].brief_description} required />
+                            <div className='form-section'>
+                                <label htmlFor='behavior-short'>Behavior: </label>
+                                <input type='text' id='brief_description' defaultValue={this.context.sightings[index].brief_description} required />
                             </div>
-                            <div className="form-section">
-                                <label htmlFor="sighting-location">Location: </label>
-                                <input type="text" id="sighting_location" defaultValue={this.context.sightings[index].sighting_location} required />
+                            <div className='form-section'>
+                                <label htmlFor='sighting-location'>Location: </label>
+                                <input type='text' id='sighting_location' defaultValue={this.context.sightings[index].sighting_location} required />
                             </div>
-                            <div className="form-section">
-                                <label htmlFor="sighting-date">Date: </label>
-                                <input type="date" id="sighting_date" min="2000-01-01" max="2020-12-31" defaultValue={this.context.sightings[index].sighting_date.slice(0, 10)} required />
+                            <div className='form-section'>
+                                <label htmlFor='sighting-date'>Date: </label>
+                                <input type='date' id='sighting_date' min='2000-01-01' max='2020-12-31' defaultValue={this.context.sightings[index].sighting_date.slice(0, 10)} required />
                             </div>
-                            <div className="form-section">
-                                <label htmlFor="behavior-record">Details: </label>
-                                <textarea id="detailed_description" rows="15" defaultValue={this.context.sightings[index].detailed_description} required />
+                            <div className='form-section'>
+                                <label htmlFor='behavior-record'>Details: </label>
+                                <textarea id='detailed_description' rows='15' defaultValue={this.context.sightings[index].detailed_description} required />
                             </div>
                             <SubmitButton />
                         </form>
