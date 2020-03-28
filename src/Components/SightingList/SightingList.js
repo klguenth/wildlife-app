@@ -15,7 +15,7 @@ export default class SightingList extends React.Component {
             params: {}
         }
     }
-
+    //click handler to show sighting in expanded view
     handleClick = (clickedIndex, e) => {
         this.setState({clickedIndex})
     }
