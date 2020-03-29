@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import Sighting from './Sighting.js';
+import SightingEdit from './SightingEdit.js';
 
-it('renders a sighting without crashing', () => {
+it('renders an edited sighting without crashing', () => {
   const div = document.createElement('div');
-  let sighting = {
-    sighting_id: 1,
-    title: 'Dolphins Playing',
+  let modifiedSighting = {
+    title: 'Dolphins Playing in the Waves',
     sighting_date: '2019-08-30',
     species: 'Atlantic Bottlenose Dolphins',
     sighting_location: 'Sanibel Island, FL',
@@ -16,7 +15,7 @@ it('renders a sighting without crashing', () => {
   }
   ReactDOM.render(
     <BrowserRouter>
-        <Sighting sighting={sighting} />
+        <SightingEdit sighting={modifiedSighting} />
     </BrowserRouter>, div);
   ReactDOM.unmountComponentAtNode(div);
 });
