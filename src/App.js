@@ -29,6 +29,7 @@ export default class App extends React.Component {
           throw new Error('Something went wrong.');
         }
         return res;
+
       })
       .then(res => res.json())
       .then(data => {
@@ -60,6 +61,7 @@ export default class App extends React.Component {
   handleEditSighting = (sighting) => {
     const index = findSighting(this.state.sightings, sighting.sighting_id);
     const sightings = this.state.sightings;
+    console.log(sightings);
     this.setState = ({
       sightings: sightings.splice(index, 1, sighting)
     })
